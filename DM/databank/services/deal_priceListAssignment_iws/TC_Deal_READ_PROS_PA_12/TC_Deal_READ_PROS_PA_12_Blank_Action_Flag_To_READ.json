@@ -1,0 +1,13 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "4363620608",
+      "dealIdentifier": "Deal_PLA_01",
+      "actionFlag":"",
+      "pricelistassignmentlist": [
+        {
+          "priceListAssignmentId": "0746354831",
+          "priceListId": "5417730766"
+        }
+      ]
+    }
+}

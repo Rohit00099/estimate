@@ -1,0 +1,17 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+        // "dealId": "9457160921",
+        // "modelId": "1140157129",
+        "dealIdentifier": "DEAL_BK_PRSP_PSEL_API_001",
+        "pricelistassignmentlist": [
+            {
+                "actionFlag": "ADD",
+                "entityId": "7593912047",
+                "entityType": "PERS",
+                "startDate": "2020-01-01",
+                "priority": "2",
+                "priceListId": "5417730766"
+            }
+        ]
+    }
+}

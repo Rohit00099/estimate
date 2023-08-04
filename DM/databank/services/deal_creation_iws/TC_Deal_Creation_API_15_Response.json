@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/3000/5205",
+        "title": "You must set the include hierarchy flag to true when deal entity type is PRSP and simulation type is CUST.",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220706110224588/RMBK1/3000/5205?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 3000,
+            "messageNbr": 5205,
+            "callSequence": "",
+            "programName": "DealCreationService",
+            "messageText": "You must set the include hierarchy flag to true when deal entity type is PRSP and simulation type is CUST.",
+            "longDescription": " "
+        }
+    }
+}

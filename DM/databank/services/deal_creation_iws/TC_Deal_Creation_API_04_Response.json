@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/3000/5217",
+        "title": "You can set the include child hierarchy flag to true only when the deal entity type is PRSP  and simulation type is set to CUST.",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220706104820032/RMBK1/3000/5217?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 3000,
+            "messageNbr": 5217,
+            "callSequence": "",
+            "programName": "ReferePriceVolume",
+            "messageText": "You can set the include child hierarchy flag to true only when the deal entity type is PRSP  and simulation type is set to CUST.",
+            "longDescription": " "
+        }
+    }
+}

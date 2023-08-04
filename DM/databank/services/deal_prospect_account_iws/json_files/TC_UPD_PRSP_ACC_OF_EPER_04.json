@@ -1,0 +1,36 @@
+{
+    "C1-ProspectAccountREST": {
+        "mainEntityId": "5772141464",
+        "mainEntityType": "EPER",
+        "actionFlag": "UPD",
+        "prospectAccountId": "1794002371",
+        "customerClass": "DM-CORP",
+        "setUpDate": "2020-01-02",
+        "currency": "USD",
+        "accountAccessGroup": "***",
+        "prosAcctCharacteristicList": [
+            {
+                "characteristicValue": "SAVINGS",
+                "effectiveDate": "2020-02-02",
+                "characteristicType": "C1_F_ATY"
+            },
+            {
+                "characteristicValue": "MH",
+                "effectiveDate": "2022-02-03",
+                "characteristicType": "VG_STATE"
+            }
+        ],
+        "prosAcctIdentifierList": [
+            {
+                "accountIdentifierType": "ACCT_NM",
+                "isPrimaryId": "false",
+                "accountNumber": "AN_TC_UPD_PRSP_ACC_OF_EPER_04"
+            },
+            {
+                "accountIdentifierType": "C1_F_ANO",
+                "isPrimaryId": "true",
+                "accountNumber": "EAI_TC_UPD_PRSP_ACC_OF_EPER_04"
+            }
+        ]
+    }
+}

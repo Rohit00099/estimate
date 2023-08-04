@@ -1,0 +1,12 @@
+//Verify Read Operation for Price  item Group Selection and ensure "PriceList", "Global Price List" & "Default Price List" should get list out (for Pricelist add PriceListId : 5417730766)
+//https://10.40.152.196:21500/ouaf/rest/ouaf/api/iws/C1-DealREST/dealService
+{
+    "C1-DealREST": {
+    "actionFlag": "READ",
+    "dealOperation": {
+    "operationFlag": "PSEL",
+    "dealId": "1453371738",
+    "dealIdentifier": "DEAL_BK_PRSP_PSEL_API_001"
+    }
+  }
+}

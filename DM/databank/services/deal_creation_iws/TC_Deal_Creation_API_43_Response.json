@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/13000/19",
+        "title": "The C1CONTD characteristic type is invalid.",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220706092345352/RMBK1/13000/19?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 13000,
+            "messageNbr": 19,
+            "callSequence": "",
+            "programName": "DealCreationWebService",
+            "messageText": "The C1CONTD characteristic type is invalid.",
+            "longDescription": " "
+        }
+    }
+}

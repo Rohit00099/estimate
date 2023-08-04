@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://10.40.72.101:14510/ouaf/rest/ouaf/message/3000/5115",
+        "title": "The deal template is invalid.",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://10.40.72.101:14510/ouaf/rest/ouaf/errorMessageInstance/20220705150323862/RMBK1/3000/5115?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 3000,
+            "messageNbr": 5115,
+            "callSequence": "",
+            "programName": "DealCreationWebServiceComp_Impl",
+            "messageText": "The deal template is invalid.",
+            "longDescription": " "
+        }
+    }
+}

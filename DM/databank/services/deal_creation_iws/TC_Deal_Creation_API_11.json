@@ -1,0 +1,68 @@
+//https://whf00ixh:27510/ouaf/rest/ouaf/api/iws/C1-DealREST/dealService
+{
+    "C1-DealREST": {
+        "actionFlag": "ADD",
+        "dealDetails": {
+            "dealEntityDetails": {
+                // "personId" : "7365531276"
+                "prospectPersonId": "3736477346" //[SF01-9305784454 , DataEnv-3736477346]
+                // "prsPerIdentifier": "Reg_Deal_Creation_API_USER",
+                // "prsPerIdentifierType": "COREG",
+                // "division": "IND"
+            },
+            "dealIdentifier": "ID_TC_Deal_Creation_API_11",
+            "dealEntityType": "PRSP", //[EPER , PRSP , EACC]
+            "contractedDealFlag": "true",
+            "currency": "USD",
+            "dealTypeCode": "DLAPR",
+            "startDate": "2022-07-05",
+            "simulationTypeFlag": "CUST", //[DEAL , CUST , ACCT]
+            "reviewFrequency": "12",
+            "dealDescription": "ID_TC_Deal_Creation_API_11 desc",
+            "dealVersionDescription": "ID_TC_Deal_Creation_API_11 desc ver",
+            "dealFrequency": "12",
+            "skipReferenceFlag": "true",
+            "priceSelectionDate": "2022-07-05",
+            "usagePeriod": "12",
+            "includeHierarchyFlag": "true",
+            "templateFlag": "false"
+        },
+        "templateReferenceDetails": {
+            "copyBasicDetailsFlag": "false",
+            "copyPricingFlag": "false",
+            "copyUsageFlag": "false"
+        },
+        "dealTermsAndConditionsDetails": {
+            "termsAndConditionsList": [
+                {
+                    "description": "DEAL_T&C1",
+                    "termsAndCondition": "DEAL_T&C1",
+                    "termsAndConditionText": "DEAL_T&C1"
+                },
+                {
+                    "description": "DEAL_T&C2",
+                    "termsAndCondition": "DEAL_T&C2",
+                    "termsAndConditionText": "DEAL_T&C2"
+                }
+            ],
+            "adhocTermsAndCondition": "ADHOC TERMS AND CONDITIONS"
+        },
+        "productDetailsList": [
+            {
+                "productCode": "PRODUCT_CON_01"
+            },
+            {
+                "productCode": "PRODUCT_CON_02"
+            }
+        ],
+        "referenceDetails": {
+            "referenceTypeFlg": "RDEL", //[ RDEL , RPER ]
+            // "referPersonId": "0895278624", //[RPER => SF-0895278624 , ADE-3091575921 ]
+            "referenceDealId": "6739465360", //[RPER => SF-7803715555 , ADE-6739465360 ]
+            "referenceModelId": "4402189258", //[RPER => SF-3054840426 , ADE-4402189258 ]
+            "referUsageSw": true,
+            "referPriceSw": false,
+            "includeChildHierarchy": false
+        }
+    }
+}

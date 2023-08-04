@@ -1,0 +1,36 @@
+{
+    "C1-ProspectAccountREST": {
+        "mainEntityId": 5140993253,
+        "mainEntityType": "PRSP",
+        "actionFlag": "ADD",
+        "customerClass": "DM-CORP",
+        "Accountdivision": "IND",
+        "setUpDate": "2019-11-21",
+        "currency": "USD",
+        "accountAccessGroup": "***",
+        "prosAcctCharacteristicList": [
+            {
+                "characteristicValue": "SAVINGS",
+                "effectiveDate": "2021-03-03",
+                "characteristicType": "C1_F_ATY"
+            },
+            {
+                "characteristicValue": "MH",
+                "effectiveDate": "2021-03-03",
+                "characteristicType": "VG_STATE"
+            }
+        ],
+        "prosAcctIdentifierList": [
+            {
+                "accountIdentifierType": "ACCT_NM",
+                "isPrimaryId": "false",
+                "accountNumber": "AN_TC_ADD_PRSP_ACC_2_PRSP_03"
+            },
+            {
+                "accountIdentifierType": "C1_F_ANO",
+                "isPrimaryId": "true",
+                "accountNumber": "EAI_TC_ADD_PRSP_ACC_2_PRSP_03"
+            }
+        ]
+    }
+}

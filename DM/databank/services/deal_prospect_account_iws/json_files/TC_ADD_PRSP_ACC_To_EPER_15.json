@@ -1,0 +1,36 @@
+{
+    "C1-ProspectAccountREST": {
+        "mainEntityId": 8879521518,
+        "mainEntityType": "EPER",
+        "actionFlag": "ADD",
+        "customerClass": "DM-CORP",
+        "Accountdivision": "IND",
+        "setUpDate": "2019-11-21",
+        "currency": "USD",
+        "accountAccessGroup": "***",
+        "prosAcctCharacteristicList": [
+            {
+                "characteristicValue": "SAVINGS",
+                "effectiveDate": "2021-03-03",
+                "characteristicType": "C1_F_ATY"
+            },
+            {
+                "characteristicValue": "MH",
+                "effectiveDate": "2021-03-03",
+                "characteristicType": "VG_STATE"
+            }
+        ],
+        "prosAcctIdentifierList": [
+            {
+                "accountIdentifierType": "ACCT_NM",
+                "isPrimaryId": "true",
+                "accountNumber": "AN_TC_ADD_PRSP_ACC_To_EPER_15"
+            },
+            {
+                "accountIdentifierType": "C1_F_ANO",
+                "isPrimaryId": "true",
+                "accountNumber": "EAI_TC_ADD_PRSP_ACC_To_EPER_15"
+            }
+        ]
+    }
+}

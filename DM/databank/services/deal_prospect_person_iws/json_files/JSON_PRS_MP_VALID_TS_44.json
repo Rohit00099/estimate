@@ -1,0 +1,83 @@
+{
+"C1-ADDPROSPERSONREST":{
+  "actionFlag": "ADD",
+  "prospectPersonName": "Deal_Prospect_API_MP_107,IND",
+  "division": "IND",
+  "customerSegment": "COMM",
+  "customerTier": "T",
+  "accessGroup": "***",
+  "emailAddress": "mil_xx@oracle.com",
+  "birthDate": "1994-03-04",
+  "address1": "Addr1",
+  "address2": "Addr2",
+  "address3": "Addr3",
+  "address4": "Addr4",
+  "city": "Georgia",
+  "state": "CA",
+  "country": "USA",
+  "postal": "313576",
+  "prosPerIdentifierList": [
+    {
+      "personIdNumber": "Deal_PROS_MP_API_107",  
+      "PersIsPrimaryId": true,
+      "idType": "COREG"      
+	},
+	
+	{
+      "personIdNumber": "01082007",
+      "PersIsPrimaryId": false,
+      "idType": "CUSTID"
+    }
+  ],
+  "prosPerCharactersticList": [  
+     {
+      "personcharacteristicValue": "MALE",
+      "personCharType": "C1-GENDR"  
+    },
+		{
+      "personcharacteristicValue": "63",
+      "personEffectiveDate": "2022-03-04",
+      "personCharType": "PERAGE"
+    },
+    {
+      "personcharacteristicValue": "1994-03-20",
+      "personEffectiveDate": "2022-03-04",
+      "personCharType": "C1_BRTDT"
+    }
+  ],
+  "prosPerRelationList": [
+    {
+      "personRelationshipType": "CHILD",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_101",
+      "endDate": "2222-03-05",
+      "startDate": "1950-03-05"
+    },
+	{
+      "personRelationshipType": "RD",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_102",
+      "startDate": "1950-03-05"
+    },
+	{
+      "personRelationshipType": "RD",
+      "idType2": "CUSTID",
+      "parentPersonIdNumber": "01082003",
+      "startDate": "1950-03-05"
+    },
+	{
+      "personRelationshipType": "CHILD",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_104",
+      "startDate": "1950-03-05"
+    },
+	{
+      "personRelationshipType": "REL1",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_104",
+      "startDate": "1950-03-05"
+    }
+	
+  ]
+}
+}

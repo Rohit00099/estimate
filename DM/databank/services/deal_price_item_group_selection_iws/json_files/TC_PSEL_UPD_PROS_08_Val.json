@@ -1,0 +1,20 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "UPD",
+        "dealOperation": {
+            "operationFlag": "PSEL",
+            "dealId": "1453371738"
+        },
+        "priceItemGroupSelection": {
+            "priceItemSelectionList": [
+                {
+                    "priceItemCode": "PI_030",
+                    "priceItemInfo": "PI_030",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                }
+            ]
+        }
+    }
+}

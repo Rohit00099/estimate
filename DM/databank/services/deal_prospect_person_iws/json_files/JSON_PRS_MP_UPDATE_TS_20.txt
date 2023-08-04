@@ -1,0 +1,83 @@
+{
+  "C1-C1-ADDPROSPERSONREST" :{
+  "prospectPersonId": "8043610594",
+  "actionFlag": "UPD",
+  "prospectPersonName": "Deal_Prospect_API_MP_UPD_05,IND",
+  "division": "IND",
+  "customerSegment": "CORP",
+  "customerTier": "",
+  "accessGroup": "***",
+  "emailAddress": "mil_xx_UPD@oracle.com",
+  "birthDate": "1983-03-04",
+  "address1": "Addr11",
+  "address2": "Addr21",
+  "address3": "Addr31",
+  "address4": "Addr41",
+  "city": "Georgia1",
+  "state": "SDY",
+  "country": "AUS",
+  "postal": "13071983",
+  "version": 1,
+  "prosPerIdentifierList": [
+    {
+      "personIdNumber": "Deal_PROS_UP_API_205",
+      "PersIsPrimaryId": true,
+      "idType": "COREG"
+    },
+  {
+      "personIdNumber": "05052017",
+      "PersIsPrimaryId": false,
+      "idType": "SSN"
+    }
+		],
+  "prosPerCharactersticList": [
+     {
+      "personcharacteristicValue": "MALE",
+      "personEffectiveDate": "2022-03-04",
+      "personCharType": "C1-GENDR"
+    },
+    {
+      "personcharacteristicValue": "63",
+      "personEffectiveDate": "2022-03-04",
+      "personCharType": "PERAGE"
+	},
+	 {
+      "personcharacteristicValue": "1994-03-20",
+      "personEffectiveDate": "2022-03-04",
+      "personCharType": "C1_BRTDT"
+    } 	   
+  ],
+ 
+ "prosPerRelationList": [
+    
+    {
+    // "childPersonId": "",
+      "personRelationshipType": "RD",
+      "idType2": "CUSTID",
+      "parentPersonIdNumber": "01082003",
+     // "endDate": "",
+      "startDate": "1950-03-05"
+    },
+	{
+    // "childPersonId": "",
+      "personRelationshipType": "CHILD",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_104",
+     // "endDate": "",
+      "startDate": "1950-03-05"
+    },
+	{
+    // "childPersonId": "",
+      "personRelationshipType": "REL1",
+      "idType2": "COREG",
+      "parentPersonIdNumber": "Deal_PROS_MP_API_104",
+     // "endDate": "",
+      "startDate": "1950-03-05"
+     
+    } 
+	  
+  
+  ] 
+  
+}
+}  

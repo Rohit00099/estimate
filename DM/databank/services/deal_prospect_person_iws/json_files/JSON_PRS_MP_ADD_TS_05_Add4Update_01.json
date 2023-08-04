@@ -1,0 +1,32 @@
+{
+"C1-ADDPROSPERSONREST":{
+  "actionFlag": "ADD",
+  "prospectPersonName": "Deal_Prospect_API_MPUP_05,IND",
+  "division": "IND",
+  "customerSegment": "COMM",
+  "customerTier": "T",
+  "accessGroup": "***",
+  "emailAddress": "mil_xx@oracle.com",
+  "birthDate": "1994-03-04",
+  "address1": "Addr1",
+  "address2": "Addr2",
+  "address3": "Addr3",
+  "address4": "Addr4",
+  "city": "Georgia",
+  "state": "CA",
+  "country": "USA",
+  "postal": "313576",
+  "prosPerIdentifierList": [
+    {
+      "personIdNumber": "Deal_PROS_UP_API_205",
+      "PersIsPrimaryId": true,
+      "idType": "COREG"
+	},
+	{
+      "personIdNumber": "01092005",
+      "PersIsPrimaryId": false,
+      "idType": "CUSTID"
+    }
+  ]
+}
+}

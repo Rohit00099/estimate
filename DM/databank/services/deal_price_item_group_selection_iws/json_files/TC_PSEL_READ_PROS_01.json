@@ -1,0 +1,9 @@
+{
+    "C1-DealREST": {
+    "actionFlag": "READ",
+    "dealOperation": {
+    "operationFlag": "PSEL",
+    "dealId": "1453371738"
+    }
+  }
+}

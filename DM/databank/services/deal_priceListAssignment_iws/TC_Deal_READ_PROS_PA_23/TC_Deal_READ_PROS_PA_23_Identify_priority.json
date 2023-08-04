@@ -1,0 +1,12 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "4986036025",
+      "dealIdentifier":"ID_TC_Deal_Prospect_304_RT_001",
+      "actionFlag":"READ",
+      "pricelistassignmentlist": [
+        {
+        "entityType": "PERS"
+        }
+      ]
+    }
+}

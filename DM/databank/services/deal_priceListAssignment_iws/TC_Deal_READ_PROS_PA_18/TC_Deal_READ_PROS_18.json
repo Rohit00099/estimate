@@ -1,0 +1,31 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "4986036025",
+      "pricelistassignmentlist": [
+        {
+          "entityId": "4302877072",
+          "entityType": "PERS",
+          "actionFlag": "ADD",
+          "startDate": "2022-03-30",
+        //   "endDate": "2022-03-29",
+          "priority": 2,
+          "priceListId": "0653865858"
+        }
+        //,
+        // {
+        //   "entityId": "4302877072",
+        //   "entityType": "PERS",
+        //   "actionFlag": "ADD",
+        //   "priority": 1,
+        //   "priceListId": "5417730766"
+        // },
+        // {
+        //   "entityId": "4302877072",
+        //   "entityType": "PERS",
+        //   "actionFlag": "ADD",
+        //   "priority": 3,
+        //   "priceListId": "4983113237"
+        // }
+      ]
+    }
+}

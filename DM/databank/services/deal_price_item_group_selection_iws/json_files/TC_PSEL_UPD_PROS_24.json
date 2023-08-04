@@ -1,0 +1,341 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "UPD",
+        "dealOperation": {
+            "operationFlag": "PSEL",
+            "dealIdentifier": "DEAL_PSEL_UPD_PROS_03_00111"
+        },
+        "priceItemGroupSelection": {
+            "priceItemSelectionList": [
+                {
+                    "priceItemCode": "PI_021",
+                    "priceItemInfo": "PI_021",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_022",
+                    "priceItemInfo": "PI_022",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_023",
+                    "priceItemInfo": "PI_023",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_033",
+                    "priceItemInfo": "PI_033",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_024",
+                    "priceItemInfo": "PI_024",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,PAYMENT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_025",
+                    "priceItemInfo": "PI_025",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,PAYMENT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_026",
+                    "priceItemInfo": "PI_026",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,PAYMENT SERVICES",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_042",
+                    "priceItemInfo": "CPIVFN_042",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_043",
+                    "priceItemInfo": "CPIVFN_043",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_044",
+                    "priceItemInfo": "CPIVFN_044",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_046",
+                    "priceItemInfo": "CPIVFN_046",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_047",
+                    "priceItemInfo": "CPIVFN_047",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_048",
+                    "priceItemInfo": "CPIVFN_048",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_051",
+                    "priceItemInfo": "CPIVFN_051",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_052",
+                    "priceItemInfo": "CPIVFN_052",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_053",
+                    "priceItemInfo": "CPIVFN_053",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFN_055",
+                    "priceItemInfo": "CPIVFN_055",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFY_041",
+                    "priceItemInfo": "CPIVFY_041",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFY_045",
+                    "priceItemInfo": "CPIVFY_045",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFY_049",
+                    "priceItemInfo": "CPIVFY_049",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFY_050",
+                    "priceItemInfo": "CPIVFY_050",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "CPIVFY_054",
+                    "priceItemInfo": "CPIVFY_054",
+                    "assignmentLevel": "Default Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_027",
+                    "priceItemInfo": "PI_027",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_028",
+                    "priceItemInfo": "PI_028",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_028",
+                    "priceItemInfo": "PI_028",
+                    "parameterInfo": "DM_CURRENCY=INR",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_028",
+                    "priceItemInfo": "PI_028",
+                    "parameterInfo": "DM_CURRENCY=INR,DM_TYPE=BT",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_028",
+                    "priceItemInfo": "PI_028",
+                    "parameterInfo": "DM_CURRENCY=USD",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_029",
+                    "priceItemInfo": "PI_029",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_030",
+                    "priceItemInfo": "PI_030",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PI_031",
+                    "priceItemInfo": "PI_031",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLB_RMB",
+                    "priceItemInfo": "GLB_RMB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_COUNTRY=TFM.UK,TFM_CURRENCY=GBP,TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_COUNTRY=TFM.USA,TFM_CURRENCY=GBP,TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_COUNTRY=TFM.USA,TFM_CURRENCY=USD,TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_COUNTRY=TFM.USA,TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_CURRENCY=GBP,TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "GLOBAL",
+                    "priceItemInfo": "GLOBAL",
+                    "parameterInfo": "TFM_TYPE=AB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "P18_RMB",
+                    "priceItemInfo": "P18_RMB",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT501",
+                    "priceItemInfo": "PDT501",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT502",
+                    "priceItemInfo": "PDT502",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT503",
+                    "priceItemInfo": "PDT503",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT504",
+                    "priceItemInfo": "PDT504",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT505",
+                    "priceItemInfo": "PDT505",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PDT506",
+                    "priceItemInfo": "PDT506",
+                    "parameterInfo": "MPP23_COUNTRY1=USA,MPP23_TYPE1=BT",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PRICFEE02",
+                    "priceItemInfo": "PRICFEE02",
+                    "parameterInfo": "P1=!A1",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PRICFEETEST",
+                    "priceItemInfo": "PRICFEETEST",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                },
+                {
+                    "priceItemCode": "PRICRATETEST",
+                    "priceItemInfo": "PRICRATETEST",
+                    "assignmentLevel": "Global Price List",
+                    "includeFlag": "true"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,62 @@
+//https://whf00ixh:27510/ouaf/rest/ouaf/api/iws/C1-DealREST/dealService
+{
+    "C1-DealREST": {
+        "actionFlag": "ADD",
+        "dealDetails": {
+            "dealEntityDetails": {
+                // "personId" : "7365531276"
+                "prospectPersonId": "3736477346" //[SF01-9305784454 , DataEnv-3736477346]
+                // "prsPerIdentifier": "Reg_Deal_Creation_API_USER",
+                // "prsPerIdentifierType": "COREG",
+                // "division": "IND"
+            },
+            "dealIdentifier": "ID_TC_Deal_Creation_API_15",
+            "dealEntityType": "PRSP", //[EPER , PRSP , EACC]
+            // "contractedDealFlag": "false",
+            // "currency": "USD",
+            // "dealTypeCode": "DLAPR",
+            "startDate": "2022-07-06", //Update Today Date
+            // "simulationTypeFlag": "CUST", //[DEAL , CUST , ACCT]
+            // "reviewFrequency": "12",
+            // "dealDescription": "ID_TC_Deal_Creation_API_14 desc",
+            // "dealVersionDescription": "ID_TC_Deal_Creation_API_14 desc ver",
+            // "dealFrequency": "12",
+            "skipReferenceFlag": "true",
+            // "priceSelectionDate": "2022-07-05", //Update Today Date
+            // "usagePeriod": "12",
+            "includeHierarchyFlag": "false",
+            "templateFlag": "false"
+        },
+        "templateReferenceDetails": {
+            "templateDealId": "1683082995", //[RPER => SF->4586550809 , ADE->1683082995 ]
+            // "templateDealIdentifier": "Refer_PRSP_CopyTemplate_Deal_001", // //[RPER => SF->Refer_PRSP_CopyTemplate_Deal_001  , ADE->Refer_PRSP_CopyTemplate_Deal_001  ]
+            // "templateModelId": "8452073061", //[RPER => SF->1532039105 , ADE->8452073061 ]
+            "copyBasicDetailsFlag": "true",
+            "copyPricingFlag": "true",
+            "copyUsageFlag": "true"
+        },
+        "dealTermsAndConditionsDetails": {
+            "termsAndConditionsList": [
+                {
+                    "description": "DEAL_T&C1",
+                    "termsAndCondition": "DEAL_T&C1",
+                    "termsAndConditionText": "DEAL_T&C1"
+                },
+                {
+                    "description": "DEAL_T&C2",
+                    "termsAndCondition": "DEAL_T&C2",
+                    "termsAndConditionText": "DEAL_T&C2"
+                }
+            ],
+            "adhocTermsAndCondition": "ADHOC TERMS AND CONDITIONS"
+        },
+        "productDetailsList": [
+            {
+                "productCode": "PRODUCT_CON_01"
+            },
+            {
+                "productCode": "PRODUCT_CON_02"
+            }
+        ]
+    }
+}

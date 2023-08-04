@@ -1,0 +1,64 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "ADD",
+        "dealDetails": {
+            "dealEntityDetails": {
+                "personId" : "4482258051"
+                // "prospectPersonId" : "9902789911"
+                // "prsPerIdentifierType": "COREG",
+                // "personIdentifier": "Reg_BK_PRSP_PSEL_API_001",
+                //  "division": "IND"
+                },
+            "dealIdentifier": "DEAL_BK_EPER_PSEL_API_001",
+            "dealEntityType": "EPER",
+            "customerSegment": "COMM",
+            "customerTier": "T",
+            "division": "IND",
+            "accessGrp": "***",
+            "dealEntityId": "8629983883",
+            "contractedDealFlag": "false",
+            "currency": "USD",
+            "dealTypeCode": "DLAPR",
+            "startDate": "2022-06-29",
+            "simulationTypeFlag": "CUST",
+            "reviewFrequency": "12",
+            "dealDescription": "DEAL_BK_EPER_PSEL_API_001 desc",
+            "dealVersionDescription": "DEAL_BK_EPER_PSEL_API_001 desc ver",
+            "dealFrequency": "12",
+            "skipReferenceFlag": "true",
+            "priceSelectionDate": "2022-06-29",
+            "usagePeriod": "12",
+            "includeHierarchyFlag": "true"
+        },
+        "templateReferenceDetails": {
+            "copyBasicDetailsFlag": "false",
+            "copyPricingFlag": "false",
+            "copyUsageFlag": "false"
+        },
+        "dealTermsAndConditionsDetails": {
+            "termsAndConditionsList": [
+                {
+                    "description": "DEAL_T&C1",
+                    "termsAndCondition": "DEAL_T&C1"
+                },
+                {
+                    "description": "DEAL_T&C2",
+                    "termsAndCondition": "DEAL_T&C2"
+                }
+            ]
+        },
+        "productDetailsList": [
+            {
+                "productCode": "PRODUCT_CON_01"
+            },
+            {
+                "productCode": "PRODUCT_CON_02"
+            }
+        ],
+        "referenceDetails": {
+            "referUsageSw": "false",
+            "referPriceSw": "false",
+            "includeChildHierarchy": "false"
+        }
+    }
+}

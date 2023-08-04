@@ -1,0 +1,19 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/11001/402",
+        "title": "C1CONTDL NY combination, not found.",
+        "httpStatus": 400,
+        "detail": "To solve the problem, check if the fields are populated, or the combination of them is a valid one to find an item in a table.\nExample: if the parameter of an algorithm is not populated, this could result in the system not finding the algorithm.",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220706092927866/RMBK1/11001/402?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 11001,
+            "messageNbr": 402,
+            "callSequence": "",
+            "programName": "DealCreationService",
+            "messageText": "C1CONTDL NY combination, not found.",
+            "longDescription": "To solve the problem, check if the fields are populated, or the combination of them is a valid one to find an item in a table.\nExample: if the parameter of an algorithm is not populated, this could result in the system not finding the algorithm.",
+            "tableName": "C1_DEAL_CHAR",
+            "fieldName": "CHAR_VAL"
+        }
+    }
+}

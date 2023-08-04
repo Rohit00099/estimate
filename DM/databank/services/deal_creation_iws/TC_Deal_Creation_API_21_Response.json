@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/3000/2021",
+        "title": "Simulation Type Should Be Customer or Deal When Deal Entity Type Is Customer/Prospect",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220705152008072/RMBK1/3000/2021?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 3000,
+            "messageNbr": 2021,
+            "callSequence": "",
+            "programName": "DealCreationService",
+            "messageText": "Simulation Type Should Be Customer or Deal When Deal Entity Type Is Customer/Prospect",
+            "longDescription": " "
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "C1-ProspectAccountREST": {
+        "mainEntityId": "0581278599",
+        "mainEntityType": "PRSP",
+        "actionFlag": "UPD",
+        "prospectAccountId": "1671448770",
+        "customerClass": "DM-CORP",
+        "setUpDate": "2020-01-02",
+        "currency": "USD",
+        "accountAccessGroup": "***",
+        "prosAcctCharacteristicList": [
+            {
+                "characteristicValue": "SAVINGS",
+                "effectiveDate": "2020-02-02",
+                "characteristicType": "C1_F_ATY"
+            },
+            {
+                "characteristicValue": "MH",
+                "effectiveDate": "2022-02-03",
+                "characteristicType": "VG_STATE"
+            }
+        ],
+        "prosAcctIdentifierList": [
+            {
+                "accountIdentifierType": "ACCT_NM",
+                "isPrimaryId": "true",
+                "accountNumber": "AN_TC_UPD_PRSP_SERVICE_14"
+            },
+            {
+                "accountIdentifierType": "C1_F_ANO",
+                "isPrimaryId": "true",
+                "accountNumber": "EAI_TC_UPD_PRSP_SERVICE_14"
+            }
+        ]
+    }
+}

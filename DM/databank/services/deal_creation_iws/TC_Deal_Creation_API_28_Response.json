@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/11001/1850",
+        "title": "Input request field Currency Code has an invalid value.  Referenced FK F1-CURCY Currency Code IN0 by table Currency Code does not exist.",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220705155517737/RMBK1/11001/1850?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 11001,
+            "messageNbr": 1850,
+            "callSequence": "",
+            "programName": "DealCreationService",
+            "messageText": "Input request field Currency Code has an invalid value.  Referenced FK F1-CURCY Currency Code IN0 by table Currency Code does not exist.",
+            "longDescription": " "
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "RequireddealId",
+      "dealIdentifier": "RequestdealIdentifier",
+      "pricelistassignmentlist": [
+        {
+          "entityId": "RequestentityId",
+          "entityType": "RequestentityType",
+          "actionFlag": "RequestactionFlag",
+          "priority": "Requestpriority",
+          "startDate": "RequeststartDate",
+          "endDate": "RequestendDate",
+          "priceListId": "RequestpriceListId"
+        }
+      ]
+    }
+}

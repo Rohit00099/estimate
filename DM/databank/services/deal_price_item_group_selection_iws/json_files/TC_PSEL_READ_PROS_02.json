@@ -1,0 +1,9 @@
+{
+    "C1-DealREST": {
+    "actionFlag": "READ",
+    "dealOperation": {
+    "operationFlag": "PSEL",
+    "dealIdentifier": "DEAL_BK_PRSP_PSEL_API_001"
+    }
+  }
+}

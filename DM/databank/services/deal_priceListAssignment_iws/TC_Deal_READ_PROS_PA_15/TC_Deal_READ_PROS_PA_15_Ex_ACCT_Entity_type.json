@@ -1,0 +1,12 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "7813994378",
+      
+      "actionFlag":"READ",
+      "pricelistassignmentlist": [
+        {
+        "entityType": "ACCT"
+        }
+      ]
+    }
+}

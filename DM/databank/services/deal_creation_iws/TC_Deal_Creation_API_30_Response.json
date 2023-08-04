@@ -1,0 +1,17 @@
+{
+    "problemDetailDocument": {
+        "problemType": "https://whf00ixh:27510/ouaf/rest/ouaf/message/3000/2029",
+        "title": "Start date must be future date",
+        "httpStatus": 400,
+        "detail": " ",
+        "problemInstance": "https://whf00ixh:27510/ouaf/rest/ouaf/errorMessageInstance/20220705170509919/RMBK1/3000/2029?request=%2Fouaf%2Frest%2Fouaf%2Fapi%2Fiws%2FC1-DealREST%2FdealService&method=POST",
+        "serverMessage": {
+            "messageCategory": 3000,
+            "messageNbr": 2029,
+            "callSequence": "",
+            "programName": "DealMaintenance",
+            "messageText": "Start date must be future date",
+            "longDescription": " "
+        }
+    }
+}

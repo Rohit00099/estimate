@@ -1,0 +1,20 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "UPD",
+        "dealOperation": {
+            "operationFlag": "PSEL",
+            "dealIdentifier": "DEAL_PSEL_UPD_PROS_03_001"
+        },
+        "priceItemGroupSelection": {
+            "priceItemSelectionList": [
+                {
+                    "priceItemCode": "PI_022",
+                    "priceItemInfo": "PI_022",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                }
+            ]
+        }
+    }
+}

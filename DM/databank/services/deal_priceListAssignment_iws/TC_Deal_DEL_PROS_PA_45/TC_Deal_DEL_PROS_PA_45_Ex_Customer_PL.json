@@ -1,0 +1,15 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "5678880791",
+      "dealIdentifier": "Deal_PLA_Per_01",
+      "pricelistassignmentlist": [
+        {
+          "entityId": "1764941207",
+          "entityType": "PERS",
+          "actionFlag": "DEL",
+          "priceListId": "5417730766",
+          "priceListAssignmentId": "6359048085"
+        }
+      ]
+    }
+}

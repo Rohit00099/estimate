@@ -1,0 +1,20 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "UPD",
+        "dealOperation": {
+            "operationFlag": "PSEL",
+            "dealId": "1453371738"
+        },
+        "priceItemGroupSelection": {
+            "priceItemSelectionList": [
+                {
+                    "priceItemCode": "PI_021",
+                    "priceItemInfo": "PI_021",
+                    "assignmentLevel": "Customer Agreed",
+                    "hierarchyDetails": "CORPORATE BANKING,ACCOUNT SERVICES",
+                    "includeFlag": "true"
+                }
+            ]
+        }
+    }
+}

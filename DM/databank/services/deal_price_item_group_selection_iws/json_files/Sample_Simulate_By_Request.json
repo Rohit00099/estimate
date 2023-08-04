@@ -1,0 +1,9 @@
+{
+    "C1-DealREST": {
+    "actionFlag": "UPD",
+    "dealOperation": {
+    "operationFlag": "SMLD",
+    "dealId": "0312856259"
+     }
+   }
+}

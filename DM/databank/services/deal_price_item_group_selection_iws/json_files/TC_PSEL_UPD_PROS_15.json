@@ -1,0 +1,21 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "UPD",
+        "dealOperation": {
+            "operationFlag": "PSEL",
+            "dealId": "1453371738"
+        },
+        "priceItemGroupSelection": {
+            "priceItemSelectionList": [
+                {
+                    "priceItemCode": "PI_028",
+                    "priceItemInfo": "PI_028",
+                    "parameterInfo": "DM_CURRENCY=INR",
+                    "assignmentLevel": "Customer Price List",
+                    "hierarchyDetails": "CORPORATE BANKING,REPORTING /SWIFT",
+                    "includeFlag": "true"
+                }
+            ]
+        }
+    }
+}

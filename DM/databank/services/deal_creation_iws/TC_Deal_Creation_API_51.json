@@ -1,0 +1,60 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "ADD",
+        "dealDetails": {
+            "dealEntityDetails": {
+                "personId": "6772262353"
+            },
+            "dealIdentifier": "TC_Deal_Creation_API_51",
+            "dealEntityType": "EPER",
+            "contractedDealFlag": "false",
+            "currency": "USD",
+            "dealTypeCode": "DLAPR",
+            "startDate": "2022-11-09",
+            "simulationTypeFlag": "DEAL",
+            "dealDescription": "TC_Deal_Creation_API_51 desc",
+            "dealVersionDescription": "TC_Deal_Creation_API_51 desc ver",
+            "dealFrequency": "12",
+            "skipReferenceFlag": "false",
+            "priceSelectionDate": "2022-11-09",
+            "usagePeriod": "3",
+            "includeHierarchyFlag": "false",
+            "templateFlag": "false"
+        },
+        "templateReferenceDetails": {
+            "copyBasicDetailsFlag": "false",
+            "copyPricingFlag": "false",
+            "copyUsageFlag": "false"
+        },
+        "dealTermsAndConditionsDetails": {
+            "termsAndConditionsList": [
+                {
+                    "description": "DEAL_T&C1",
+                    "termsAndCondition": "DEAL_T&C1",
+                    "termsAndConditionText": "DEAL_T&C1"
+                },
+                {
+                    "description": "DEAL_T&C2",
+                    "termsAndCondition": "DEAL_T&C2",
+                    "termsAndConditionText": "DEAL_T&C2"
+                }
+            ],
+            "adhocTermsAndCondition": "ADHOC TERMS AND CONDITIONS"
+        },
+        "productDetailsList": [
+            {
+                "productCode": "PRODUCT_CON_01"
+            },
+            {
+                "productCode": "PRODUCT_CON_02"
+            }
+        ],
+        "referenceDetails": {
+            "referenceTypeFlg": "RPER",
+            "referPersonId": "3091575921",
+            "referUsageSw": true,
+            "referPriceSw": true,
+            "includeChildHierarchy": true
+        }
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "C1-DealPricelistAssignmentREST": {
+      "dealId": "4363620608",
+      "dealIdentifier": "Deal_PLA_01",
+      "pricelistassignmentlist": [
+        {
+          "entityId": "2612707797",
+          "entityType": "PERS",
+          "actionFlag": "ADD",
+          "priority": 1,
+        //   "startDate": "",
+          "endDate": "2025-03-28",
+          "priceListFragmentSwitch": "",
+          "priceListId": "5417730766"
+        },
+        {
+          "entityId": "2612707797",
+          "entityType": "PERS",
+          "actionFlag": "ADD",
+          "priority": 2,
+        //   "startDate": "",
+          "endDate": "2025-03-28",
+          "priceListFragmentSwitch": "",
+          "priceListId": "4368251923"
+        },
+        //{
+          //"entityId": "2612707797",
+         //"entityType": "PERS",
+          //"actionFlag": "ADD",
+          //"priority": 3,
+        //"startDate": "",
+          //"endDate": "2025-03-28",
+          //"priceListFragmentSwitch": "",
+          //"priceListId": "3022563245"
+        }
+      ]
+    }
+}

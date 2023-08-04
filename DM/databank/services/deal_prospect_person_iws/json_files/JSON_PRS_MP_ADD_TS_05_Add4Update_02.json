@@ -1,0 +1,11 @@
+{
+"C1-ADDPROSPERSONREST":{
+  "actionFlag": "ADD",
+  "prospectPersonName": "Deal_Prospect_API_MP_UPD_05,IND",
+  "division": "IND",
+  "customerSegment": "COMM",
+  "customerTier": "T",
+  "accessGroup": "***",
+  "emailAddress": "mil_xx@oracle.com",
+  }
+}

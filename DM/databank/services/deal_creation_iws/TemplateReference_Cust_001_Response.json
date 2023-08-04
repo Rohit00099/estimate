@@ -1,0 +1,76 @@
+{
+    "C1-DealREST": {
+        "actionFlag": "ADD",
+        "dealResponse": {
+            "message": "The deal is created successfully."
+        },
+        "dealOperation": "",
+        "priceItemGroupSelection": "",
+        "dealDetails": {
+            "dealEntityDetails": {
+                "personId": "6172265035"
+            },
+            "dealIdentifier": "ID_TemplateReference_Cust_001",
+            "dealInformation": "0238584379,TemplateReference_Cust_001,IND,07-04-2022,United States Dollars,Contracted Deal-No,(1),ID_TemplateReference_Cust_001                                   ,TemplateReference_Cust_001 desc,INDIA DIVISION,Tier, ,Business banking,Deal type code for Deal Approval,Pending Simulation,Customer,System Default,Template-Yes,RMBK1   ,07-04-2022, , ,Yearly,Yearly, , , ,Skip Reference-Yes,Account,6172265035,Yearly, , ,07-04-2022, ,Skip Questionaire-Yes,            ,Include Hierarchy-Yes",
+            "dealId": "0238584379",
+            "modelId": "2559714851",
+            "dealEntityType": "EPER",
+            "customerSegment": "COMM",
+            "customerTier": "T",
+            "division": "IND",
+            "accessGrp": "***",
+            "dealEntityId": "6172265035",
+            "contractedDealFlag": "false",
+            "currency": "USD",
+            "dealTypeCode": "DLAPR",
+            "startDate": "2022-07-04",
+            "simulationTypeFlag": "CUST",
+            "reviewFrequency": "12",
+            "dealDescription": "TemplateReference_Cust_001 desc",
+            "dealVersionDescription": "TemplateReference_Cust_001 desc ver",
+            "dealFrequency": "12",
+            "skipReferenceFlag": "true",
+            "priceSelectionDate": "2022-07-04",
+            "usagePeriod": "12",
+            "includeHierarchyFlag": "true",
+            "status": "PSML",
+            "dealVersionStatus": "PSML",
+            "templateFlag": "true"
+        },
+        "templateReferenceDetails": {
+            "copyBasicDetailsFlag": "false",
+            "copyPricingFlag": "false",
+            "copyUsageFlag": "false"
+        },
+        "dealTermsAndConditionsDetails": {
+            "termsAndConditionsList": [
+                {
+                    "description": "DEAL_T&C1",
+                    "termsAndCondition": "DEAL_T&C1",
+                    "termsAndConditionText": "DEAL_T&C1"
+                },
+                {
+                    "description": "DEAL_T&C2",
+                    "termsAndCondition": "DEAL_T&C2",
+                    "termsAndConditionText": "DEAL_T&C2"
+                }
+            ],
+            "adhocTermsAndCondition": "ADHOC TERMS AND CONDITIONS"
+        },
+        "productDetailsList": [
+            {
+                "productCode": "PRODUCT_CON_01"
+            },
+            {
+                "productCode": "PRODUCT_CON_02"
+            }
+        ],
+        "referenceDetails": {
+            "referUsageSw": "false",
+            "referPriceSw": "false",
+            "includeChildHierarchy": "false"
+        },
+        "dealSimulationDetails": "",
+        "hierarchySimulationDetails": ""
+    }
+}

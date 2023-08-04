@@ -1,0 +1,113 @@
+{
+  "C1-C1-ADDPROSPERSONREST": {
+   "dealAction": "ADD",
+   "prospectPersonName": "Json_PRS_MP_ADD_TS_57,IND",
+   "division": "IND",
+   "customerSegment": "COMM",
+   "customerTier": "T",
+   "accessGroup": "***",
+   "emailAddress": "Json_PRS_MP_ADD_TS_57@oracle.com",
+   "birthDate": "1994-03-04",
+   "address1": "Json_PRS_MP_ADD_TS_57 Addr1",
+   "city": "Georgia",
+   "state": "CA",
+   "country": "USA",
+   "postal": "111057",
+   "prosPerIdentifierList": [
+     {
+       "personIdNumber": "Reg_Json_PRS_MP_ADD_TS_57",
+       "PersIsPrimaryId": true,
+       "idType": "COREG"
+     },
+     {
+       "personIdNumber": "2102",
+       "PersIsPrimaryId": false,
+       "idType": "CUSTID"
+     }
+   ],
+   "prosPerCharactersticList": [
+     {
+       "personcharacteristicValue": "MALE",
+       "personEffectiveDate": "2022-03-04",
+       "personCharType": "C1-GENDR"
+     },
+     {
+       "personcharacteristicValue": "63",
+       "personEffectiveDate": "2022-03-04",
+       "personCharType": "PERAGE"
+     },
+     {
+       "personcharacteristicValue": "1994-03-20",
+       "personEffectiveDate": "2022-03-04",
+       "personCharType": "C1_BRTDT"
+     }
+   ]
+ ,
+     "prosAccountList": [
+     {
+       "customerClass": "DM-CORP",
+       "Accountdivision": "IND",
+       "setUpDate": "2000-03-04",
+       "currency": "USD",
+       "billCycle": "BKEM",
+       "accountAccessGroup": "***",
+       "prosAcctCharacteristicList": [
+         {
+           "characteristicValue": "SAVINGS",
+           "effectiveDate": "2021-04-04",
+           "characteristicType": "C1_F_ATY"
+         },
+         {
+           "characteristicValue": "1298312131",
+           "effectiveDate": "2021-03-04",
+           "characteristicType": "C1_F_ANO"
+         }
+       ],
+       "prosAcctIdentifierList": [
+         {
+           "accountIdentifierType": "C1_F_ANO",
+           "isPrimaryId": true,
+           "accountNumber": "Test_rt_API_021"
+         },
+         {
+           "accountIdentifierType": "ACCT_NM",
+           "isPrimaryId": false,
+           "accountNumber": "Acc_Pros_Test_0101"
+         }
+       ]
+     },
+    {
+       "customerClass": "DM-CORP",
+       "Accountdivision": "930",
+       "setUpDate": "2000-04-04",
+       "currency": "USD",
+       "billCycle": "BKEM",
+       "accountAccessGroup": "***",
+       "prosAcctCharacteristicList": [
+         {
+           "characteristicValue": "SAVINGS",
+           "effectiveDate": "2021-04-04",
+           "characteristicType": "C1_F_ATY"
+         },
+         {
+           "characteristicValue": "1298312131",
+           "effectiveDate": "2021-03-04",
+           "characteristicType": "C1_F_ANO"
+         }
+       ],
+       "prosAcctIdentifierList": [
+         {
+           "accountIdentifierType": "C1_F_ANO",
+           "isPrimaryId": true,
+           "accountNumber": "EAI_Json_PRS_MP_ADD_TS_57_001"
+         },
+         {
+           "accountIdentifierType": "ACCT_NM",
+           "isPrimaryId": false,
+           "accountNumber": "AN_Json_PRS_MP_ADD_TS_57_001"
+         }
+       ]
+     }
+   ]
+ }
+ }
