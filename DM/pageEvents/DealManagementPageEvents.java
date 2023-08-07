@@ -1,8 +1,8 @@
 package test.java.ormbframework.pageEvents;
 
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
+// import com.fasterxml.jackson.databind.JsonNode;
+// import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import org.openqa.selenium.By;
@@ -41,8 +41,7 @@ import static org.testng.Assert.assertEquals;
 
 import com.google.common.collect.MapDifference;
 import com.google.common.collect.Maps;
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.type.TypeReference;
+
 
 
 public class DealManagementPageEvents {
@@ -2946,7 +2945,7 @@ public class DealManagementPageEvents {
 
 		try {
 			Thread.sleep(5000);
-			CF.FnSetFrame(driver, "zoneMapFrame_2");
+			CF.FnSetFrame(driver, "zoneMapFrame_1");
 			String sParentWindow = driver.getWindowHandle();
 			Thread.sleep(2000);
 			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_FinalizeDeal_Button);
@@ -3003,7 +3002,7 @@ public class DealManagementPageEvents {
 			Thread.sleep(2000);
 			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Refresh_Button);
 			Thread.sleep(10000);
-			CF.FnSetFrame(driver, "zoneMapFrame_2");
+			CF.FnSetFrame(driver, "zoneMapFrame_1");
 			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_AcceptDeal_Button);
 			Thread.sleep(5000);
 			CF.FnSetFrame(driver, "uiMap");
@@ -7375,7 +7374,7 @@ public class DealManagementPageEvents {
 			CF.FnWaitForElement(driver, 360, Deal_Information_PersonalHierarchyPersonName_Label_Path);
 
 			Thread.sleep(2000);
-			String GetStatusText =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_Customer_Status_On_Personalhierarchy1).getAttribute("currentSrc");
+			String GetStatusText =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_Customer_Status_On_Personalhierarchy1).getAttribute("src");
 			System.out.println("inn:-" + CF.FnGetTextFromElement(driver, DealManagementPageElements.Deal_Information_Customer_Status_On_Personalhierarchy1, "innerText"));
 			System.out.println("GetStatusText:-" + GetStatusText + " || status:-" + status);
 			if (GetStatusText.contains(DealAllStatus)) {
@@ -7613,7 +7612,7 @@ public class DealManagementPageEvents {
 
 
 			// here we are comparing approval image from deal information with pricing screen price item shown image
-			String DivisionStatusFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_division_Financial_Summary_Status).getAttribute("currentSrc");
+			String DivisionStatusFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_division_Financial_Summary_Status).getAttribute("src");
 			System.out.println("DivisionStatusFromApplication :-" + DivisionStatusFromApplication);
 			if (DivisionStatusFromApplication.contains(DealAllStatus)) {
 				CF.FnTestCaseStatusReport("Pass", "Verification of division Financial Summary status Is Completed Successfully");
@@ -7758,18 +7757,20 @@ public class DealManagementPageEvents {
 
 				WebElement SingleWebElement = driver.findElement(By.xpath(DealManagementPageElements.Deal_Approval_Workflow_Approval_History_Table + "[" + SingleRecord + "]"));
 
+				
+				sSequenceFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sSequenceApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sProcessFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sProcessApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sApprovalTypeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sApprovalTypeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sDivisionFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sDivisionApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sProductFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sProductApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sApprovalLevelFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sApprovalLevelApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sToDoRoleFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sToDoRoleApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sUserNameFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sUserNameApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sActionTakenFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sActionTakenApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sCreateDateTimeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sCreateDateTimeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
+				sUpdateDateTimeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sUpdateDateTimeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
 
-				sSequenceFromApplication = (String) js.executeScript("return arguments[0].cells[0].innerText;", SingleWebElement);
-				sProcessFromApplication = (String) js.executeScript("return arguments[0].cells[1].innerText;", SingleWebElement);
-				sApprovalTypeFromApplication = (String) js.executeScript("return arguments[0].cells[2].innerText;", SingleWebElement);
-				sDivisionFromApplication = (String) js.executeScript("return arguments[0].cells[3].innerText;", SingleWebElement);
-				sProductFromApplication = (String) js.executeScript("return arguments[0].cells[4].innerText;", SingleWebElement);
-				sApprovalLevelFromApplication = (String) js.executeScript("return arguments[0].cells[5].innerText;", SingleWebElement);
-				sToDoRoleFromApplication = (String) js.executeScript("return arguments[0].cells[6].innerText;", SingleWebElement);
-				sUserNameFromApplication = (String) js.executeScript("return arguments[0].cells[7].innerText;", SingleWebElement);
-				sActionTakenFromApplication = (String) js.executeScript("return arguments[0].cells[8].innerText;", SingleWebElement);
-				sCreateDateTimeFromApplication = (String) js.executeScript("return arguments[0].cells[9].innerText;", SingleWebElement);
-				sUpdateDateTimeFromApplication = (String) js.executeScript("return arguments[0].cells[10].innerText;", SingleWebElement);
+
 				sCreateDateTimeFromApplication = sCreateDateTimeFromApplication.split("\\ ")[0];
 				sUpdateDateTimeFromApplication = sUpdateDateTimeFromApplication.split("\\ ")[0];
 
@@ -12219,11 +12220,11 @@ public class DealManagementPageEvents {
 		return WF.respBody;
 
 	}
-
-	/*'############################################################################################################################################################################################################################################
+/*
+	'############################################################################################################################################################################################################################################
 	'Function Name        : FnDealExtractIWS
 	,Description          : To Extract Deal
-	'###############################################################################################################################################################################################################################################*/
+	'###############################################################################################################################################################################################################################################
 	public static void FnDealExtractIWS(int iStartingRow, String sSheetName, String sWorkbook) throws Exception {
 	    System.out.println(">>>>>>>>>>--FnDealExtractIWS");
 
@@ -12305,6 +12306,6 @@ public class DealManagementPageEvents {
 
 	}
 
-
+*/
 	///////////////////////////////////////////
 }

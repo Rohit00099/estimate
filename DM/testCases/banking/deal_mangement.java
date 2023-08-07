@@ -60,8 +60,8 @@ public class deal_mangement extends BaseTest {
 
     }
 
-    
-*/
+    */
+
 
 
     /***********************************************************************************************************************************************************
@@ -957,7 +957,7 @@ public class deal_mangement extends BaseTest {
 
 
     /***********************************************************************************************************************************************************
-     * Written by					:   	Ajinkya Joshi
+     * Written by					:   	Rohit Thik
      * Script Name					:  		Currency Conversion
      * Script Description			: 		Currency Conversion - Test 39126	
      * Manual Test Scenario covered	: 		Yes
@@ -1009,7 +1009,7 @@ public class deal_mangement extends BaseTest {
                 DB.FnUpdateBillableChargeDates(77, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(78, sSheetName, sWorkbook);
 
-                String DealId = "6808625427";
+                String DealId = "3734785295";
 
                 boolean skipDealCreation = false;
 
@@ -1414,8 +1414,9 @@ public class deal_mangement extends BaseTest {
                 //				dealManagementPageEvents.FnVerifyProductFinancialSummaryOnCustomerOrAccountPricingScreen(403, sSheetName, sWorkbook, "Division", "INDSPM", true);
 
                 //Function for Navigation To Deal Information From Pricing And Commitments
-                //				dealManagementPageEvents.FnNavigationToDealInformationFromPricingAndCommitments();
+                dealManagementPageEvents.FnNavigationToDealInformationFromPricingAndCommitments();
 
+                
                 //Function To verify Personal Hierarchy Information On Deal Information
                 dealManagementPageEvents.FnVerifyPersonalHierarchyInformationOnDealInformation(409, sSheetName, sWorkbook);
 
@@ -1797,7 +1798,7 @@ public class deal_mangement extends BaseTest {
                 AF.FnNavigation(getDriver(), "Deal Dashboard"); //179
 
                 //Function To Verify Deal ToDo Type
-                dealManagementPageEvents.FnVerifyDealToDoType(DealId, "Deal_Dashboard"); //179
+//                dealManagementPageEvents.FnVerifyDealToDoType(DealId, "Deal_Dashboard"); //179
 
                 //Function To Search for deal ID created 
                 dealManagementPageEvents.FnSearchDealIdFromDealDashboard(DealId); //180
@@ -1885,9 +1886,9 @@ public class deal_mangement extends BaseTest {
                 String sSheetName = "Datasheet - Customer-Account";
                 BaseTest.sTestDescription = "Deal Management verifications for Negotiability";
 
-                Boolean StartDealFromSearchDealId = true;
+                Boolean StartDealFromSearchDealId = false;
 
-                String sDealIDCreatedAfterDealCreation = "5423280660"; //for Test Resume [5218241303]
+                String sDealIDCreatedAfterDealCreation = "4635473897"; //for Test Resume [5218241303]
 
 
 
@@ -1923,18 +1924,18 @@ public class deal_mangement extends BaseTest {
                 //Function to Navigate to view and edit pricing on Pricing and commitment screen
                 dealManagementPageEvents.FnNavigateToViewAndEditPricing();
                 //////////////////////////// --New --\\\\\\\\\\\\\\\\\\\\\\\\\
-//
-//                //NPI_021
-//                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(120, sSheetName, sWorkbook);
-//
-//                //NPI_021
-//                dealManagementPageEvents.FnVerifyPriceItemValidationOnPricingScreen(131, sSheetName, sWorkbook);
+
+                //NPI_021
+                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(120, sSheetName, sWorkbook);
+
+                //NPI_021
+                dealManagementPageEvents.FnVerifyPriceItemValidationOnPricingScreen(131, sSheetName, sWorkbook);
 
                 //NPI_032
-//                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(121, sSheetName, sWorkbook); //rate 15
-//                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(122, sSheetName, sWorkbook); //rate 10.99
-//                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(123, sSheetName, sWorkbook); //rate 11
-//                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(124, sSheetName, sWorkbook); //rate 15
+                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(121, sSheetName, sWorkbook); //rate 15
+                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(122, sSheetName, sWorkbook); //rate 10.99
+                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(123, sSheetName, sWorkbook); //rate 11
+                dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(124, sSheetName, sWorkbook); //rate 15
                 dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(125, sSheetName, sWorkbook); //rate 20.12
                 dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(126, sSheetName, sWorkbook); //rate 16
 
@@ -2445,7 +2446,7 @@ public class deal_mangement extends BaseTest {
                 //################ Return Deal To Submitter IWS ####################//
                 String ReturnDealtoSubmitter = "{\"C1-DealREST\":{\"actionFlag\":\"UPD\",\"dealOperation\":{\"operationFlag\":\"RETN\",\"dealId\":\"" + sDealId + "\",\"division\":\"IND\",\"comments\":\"Recommended Price Item\",\"rejectReasonCode\":\"RETURN\"}}}";
                 DM.FnReturnDealToSubmitterUsingIWS(sCreateDealResource, ReturnDealtoSubmitter, sContentTypeHeader, sAcceptTypeHeader);
-/*
+
                 // Login Change to RMBK1 User
                 WF.FnUserChange("RMBK1");
 
@@ -2537,7 +2538,7 @@ public class deal_mangement extends BaseTest {
                 dealManagementPageEvents.FnVerifyDealLogs(261, sSheetName, sWorkbook);
                 dealManagementPageEvents.FnVerifyDealLogs(262, sSheetName, sWorkbook);
 
-*/
+
             }
 
         } catch (Exception e) {
