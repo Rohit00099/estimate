@@ -38,7 +38,7 @@ public class deal_mangement extends BaseTest {
     public static Boolean OnlineSimulation = true;
     public static Boolean IwsSimulation = false;
 
-/*    
+   
 
     @BeforeClass
     public void beforeClass() throws Exception {
@@ -60,7 +60,7 @@ public class deal_mangement extends BaseTest {
 
     }
 
-    */
+
 
 
 
@@ -957,7 +957,7 @@ public class deal_mangement extends BaseTest {
 
 
     /***********************************************************************************************************************************************************
-     * Written by					:   	Rohit Thik
+     * Written by					:   	Ajinkya Joshi
      * Script Name					:  		Currency Conversion
      * Script Description			: 		Currency Conversion - Test 39126	
      * Manual Test Scenario covered	: 		Yes
@@ -1009,7 +1009,7 @@ public class deal_mangement extends BaseTest {
                 DB.FnUpdateBillableChargeDates(77, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(78, sSheetName, sWorkbook);
 
-                String DealId = "3734785295";
+                String DealId = "6808625427";
 
                 boolean skipDealCreation = false;
 
@@ -1416,7 +1416,7 @@ public class deal_mangement extends BaseTest {
                 //Function for Navigation To Deal Information From Pricing And Commitments
                 dealManagementPageEvents.FnNavigationToDealInformationFromPricingAndCommitments();
 
-                
+
                 //Function To verify Personal Hierarchy Information On Deal Information
                 dealManagementPageEvents.FnVerifyPersonalHierarchyInformationOnDealInformation(409, sSheetName, sWorkbook);
 
@@ -1883,12 +1883,12 @@ public class deal_mangement extends BaseTest {
 
                 //Excel Data to be used:
                 String sWorkbook = "./databank/banking/deal_management/DM_Automation_Negotiability_Module.xlsx";
-                String sSheetName = "Datasheet - Customer-Account";
+                String sSheetName = "TestDataSheet";
                 BaseTest.sTestDescription = "Deal Management verifications for Negotiability";
 
                 Boolean StartDealFromSearchDealId = false;
 
-                String sDealIDCreatedAfterDealCreation = "4635473897"; //for Test Resume [5218241303]
+                String sDealIDCreatedAfterDealCreation = "8811270919"; //for Test Resume [5218241303]
 
 
 
@@ -1923,7 +1923,7 @@ public class deal_mangement extends BaseTest {
 
                 //Function to Navigate to view and edit pricing on Pricing and commitment screen
                 dealManagementPageEvents.FnNavigateToViewAndEditPricing();
-                //////////////////////////// --New --\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
                 //NPI_021
                 dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(120, sSheetName, sWorkbook);

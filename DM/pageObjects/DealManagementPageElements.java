@@ -482,17 +482,14 @@ public interface DealManagementPageElements
 	String ProductProposedCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[2]";
 	String ProductProposedProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[3]";
 	String ProductProposedProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[4]";
-
 	String ProductOriginalRevenuePath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[1]";
 	String ProductOriginalCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[2]";
 	String ProductOriginalProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[3]";
 	String ProductOriginalProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[4]";
-
 	String ProductStandardRevenuePath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[1]";
 	String ProductStandardCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[2]";
 	String ProductStandardProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[3]";
 	String ProductStandardProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[4]";
-
 	
 	
 	
