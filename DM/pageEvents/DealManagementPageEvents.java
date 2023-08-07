@@ -125,135 +125,135 @@ public class DealManagementPageEvents {
 	'Function Name        : FnDealCreation
 	,Description          : Create deal through UI for given entity,person ID
 	'###############################################################################################################################################################################################################################################*/
-public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbook) throws Exception {
-	System.out.println(">>>>>>>>>>--FnCreateDeal");
-	String dateName = new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date());
-	String sDealIdentifier, sDealType, sDealCurrency, sSimulationType, sStartDate, sPriceSelectionDate, sReviewFrequency, sDealFrequency, sUsageFrequency, sDealDescription, sDealVersionDescription, sSkipReference, sSkipQuestionnaire, sTemplateDeal, sTnC1, sTnC2, sTnC3, sDealID, sDealIDValue1 = null;
-	sDealIdentifier = CF.FnGetCellValue(iStartingRow, 1, sSheetName, sWorkbook).toString().trim();
-	sDealType = CF.FnGetCellValue(iStartingRow, 2, sSheetName, sWorkbook).toString().trim();
-	sDealCurrency = CF.FnGetCellValue(iStartingRow, 3, sSheetName, sWorkbook).toString().trim();
-	sSimulationType = CF.FnGetCellValue(iStartingRow, 4, sSheetName, sWorkbook).toString().trim();
-	sStartDate = CF.FnGetCellValue(iStartingRow, 5, sSheetName, sWorkbook).toString().trim();
-	sPriceSelectionDate = CF.FnGetCellValue(iStartingRow, 6, sSheetName, sWorkbook).toString().trim();
-	sReviewFrequency = CF.FnGetCellValue(iStartingRow, 7, sSheetName, sWorkbook).toString().trim();
-	sDealFrequency = CF.FnGetCellValue(iStartingRow, 8, sSheetName, sWorkbook).toString().trim();
-	sUsageFrequency = CF.FnGetCellValue(iStartingRow, 9, sSheetName, sWorkbook).toString().trim();
-	sDealDescription = CF.FnGetCellValue(iStartingRow, 10, sSheetName, sWorkbook).toString().trim();
-	sDealVersionDescription = CF.FnGetCellValue(iStartingRow, 11, sSheetName, sWorkbook).toString().trim();
-	sSkipReference = CF.FnGetCellValue(iStartingRow, 12, sSheetName, sWorkbook).toString().trim();
-	sSkipQuestionnaire = CF.FnGetCellValue(iStartingRow, 13, sSheetName, sWorkbook).toString().trim();
-	sTemplateDeal = CF.FnGetCellValue(iStartingRow, 14, sSheetName, sWorkbook).toString().trim();
-	sTnC1 = CF.FnGetCellValue(iStartingRow, 15, sSheetName, sWorkbook).toString().trim();
-	sTnC2 = CF.FnGetCellValue(iStartingRow, 16, sSheetName, sWorkbook).toString().trim();
-	sTnC3 = CF.FnGetCellValue(iStartingRow, 17, sSheetName, sWorkbook).toString().trim();
-	sDealID = CF.FnGetCellValue(iStartingRow, 18, sSheetName, sWorkbook).toString().trim();
-	sDealIdentifier = sDealIdentifier + "_" + dateName;
-	System.out.println("Search entity,Person ID,Division,Person Name is " + sDealIdentifier + sDealType + sDealCurrency + sSimulationType + sStartDate + sPriceSelectionDate + sReviewFrequency + sDealFrequency + sUsageFrequency + sDealDescription + sDealVersionDescription + sSkipReference + sSkipQuestionnaire + sTemplateDeal + sTnC1 + sTnC2 + sTnC3 + sDealID);
-	try {
-		CF.FnSetFrame(driver, "zoneMapFrame_2");
-		CF.FnWaitForElement(driver, 360, DealManagementPageElements.Deal_Information_DealIdentifier_TextBox);
-		if (!sDealIdentifier.equalsIgnoreCase("NoValue")) {
-			CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealIdentifier_TextBox, sDealIdentifier);
-		}
-		if (!sDealType.equalsIgnoreCase("NoValue")) {
-			String sParentWindow = driver.getWindowHandle();
-			Thread.sleep(2000);
-			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_Icon);
-			Thread.sleep(8000);
-			Set < String > handles = driver.getWindowHandles();
-			for (String windowHandle: handles) {
-				if (!windowHandle.equals(sParentWindow)) {
-					driver.switchTo().window(windowHandle);
-					Thread.sleep(5000);
-					CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_ExpandFilters_Button);
-					Thread.sleep(3000);
-					CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox);
-					Thread.sleep(2000);
-					CF.FnClearTextFieldValue(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox);
-					Thread.sleep(2000);
-					CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox).sendKeys(sDealType);
-					Thread.sleep(2000);
-					CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_Button);
-					Thread.sleep(2000);
-					//driver.close(); //closing child window
-					driver.switchTo().window(sParentWindow); //cntrl to parent window
+	public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbook) throws Exception {
+		System.out.println(">>>>>>>>>>--FnCreateDeal");
+		String dateName = new SimpleDateFormat("ddMMyyyyhhmmss").format(new Date());
+		String sDealIdentifier, sDealType, sDealCurrency, sSimulationType, sStartDate, sPriceSelectionDate, sReviewFrequency, sDealFrequency, sUsageFrequency, sDealDescription, sDealVersionDescription, sSkipReference, sSkipQuestionnaire, sTemplateDeal, sTnC1, sTnC2, sTnC3, sDealID, sDealIDValue1 = null;
+		sDealIdentifier = CF.FnGetCellValue(iStartingRow, 1, sSheetName, sWorkbook).toString().trim();
+		sDealType = CF.FnGetCellValue(iStartingRow, 2, sSheetName, sWorkbook).toString().trim();
+		sDealCurrency = CF.FnGetCellValue(iStartingRow, 3, sSheetName, sWorkbook).toString().trim();
+		sSimulationType = CF.FnGetCellValue(iStartingRow, 4, sSheetName, sWorkbook).toString().trim();
+		sStartDate = CF.FnGetCellValue(iStartingRow, 5, sSheetName, sWorkbook).toString().trim();
+		sPriceSelectionDate = CF.FnGetCellValue(iStartingRow, 6, sSheetName, sWorkbook).toString().trim();
+		sReviewFrequency = CF.FnGetCellValue(iStartingRow, 7, sSheetName, sWorkbook).toString().trim();
+		sDealFrequency = CF.FnGetCellValue(iStartingRow, 8, sSheetName, sWorkbook).toString().trim();
+		sUsageFrequency = CF.FnGetCellValue(iStartingRow, 9, sSheetName, sWorkbook).toString().trim();
+		sDealDescription = CF.FnGetCellValue(iStartingRow, 10, sSheetName, sWorkbook).toString().trim();
+		sDealVersionDescription = CF.FnGetCellValue(iStartingRow, 11, sSheetName, sWorkbook).toString().trim();
+		sSkipReference = CF.FnGetCellValue(iStartingRow, 12, sSheetName, sWorkbook).toString().trim();
+		sSkipQuestionnaire = CF.FnGetCellValue(iStartingRow, 13, sSheetName, sWorkbook).toString().trim();
+		sTemplateDeal = CF.FnGetCellValue(iStartingRow, 14, sSheetName, sWorkbook).toString().trim();
+		sTnC1 = CF.FnGetCellValue(iStartingRow, 15, sSheetName, sWorkbook).toString().trim();
+		sTnC2 = CF.FnGetCellValue(iStartingRow, 16, sSheetName, sWorkbook).toString().trim();
+		sTnC3 = CF.FnGetCellValue(iStartingRow, 17, sSheetName, sWorkbook).toString().trim();
+		sDealID = CF.FnGetCellValue(iStartingRow, 18, sSheetName, sWorkbook).toString().trim();
+		sDealIdentifier = sDealIdentifier + "_" + dateName;
+		System.out.println("Search entity,Person ID,Division,Person Name is " + sDealIdentifier + sDealType + sDealCurrency + sSimulationType + sStartDate + sPriceSelectionDate + sReviewFrequency + sDealFrequency + sUsageFrequency + sDealDescription + sDealVersionDescription + sSkipReference + sSkipQuestionnaire + sTemplateDeal + sTnC1 + sTnC2 + sTnC3 + sDealID);
+		try {
+			CF.FnSetFrame(driver, "zoneMapFrame_2");
+			CF.FnWaitForElement(driver, 360, DealManagementPageElements.Deal_Information_DealIdentifier_TextBox);
+			if (!sDealIdentifier.equalsIgnoreCase("NoValue")) {
+				CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealIdentifier_TextBox, sDealIdentifier);
+			}
+			if (!sDealType.equalsIgnoreCase("NoValue")) {
+				String sParentWindow = driver.getWindowHandle();
+				Thread.sleep(2000);
+				CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_Icon);
+				Thread.sleep(8000);
+				Set < String > handles = driver.getWindowHandles();
+				for (String windowHandle: handles) {
+					if (!windowHandle.equals(sParentWindow)) {
+						driver.switchTo().window(windowHandle);
+						Thread.sleep(5000);
+						CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_ExpandFilters_Button);
+						Thread.sleep(3000);
+						CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox);
+						Thread.sleep(2000);
+						CF.FnClearTextFieldValue(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox);
+						Thread.sleep(2000);
+						CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_DealTypeSearch_DealType_TextBox).sendKeys(sDealType);
+						Thread.sleep(2000);
+						CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_DealTypeSearch_Button);
+						Thread.sleep(2000);
+						//driver.close(); //closing child window
+						driver.switchTo().window(sParentWindow); //cntrl to parent window
+					}
 				}
 			}
-		}
-		if (!sDealCurrency.equalsIgnoreCase("NoValue")) {
-			Thread.sleep(5000);
-			CF.FnSetFrame(driver, "zoneMapFrame_2");
-			Thread.sleep(2000);
-			CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_DealCurrency_DropDown, sDealCurrency);
-		}
-		if (!sSimulationType.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_SimulationType_DropDown, sSimulationType);
-		}
-		if (!sStartDate.equalsIgnoreCase("NoValue")) {
-			CF.FnSetText(driver, DealManagementPageElements.Deal_Information_StartDate_DateField, sStartDate);
-		}
-		if (!sPriceSelectionDate.equalsIgnoreCase("NoValue")) {
-			CF.FnSetText(driver, DealManagementPageElements.Deal_Information_PriceSelectionDate_DateField, sPriceSelectionDate);
-		}
-		if (!sReviewFrequency.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_ReviewFrequency_DropDown, sReviewFrequency);
-		}
-		if (!sDealFrequency.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_DealFrequency_DropDown, sDealFrequency);
-		}
-		if (!sUsageFrequency.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_UsagePeriod_DropDown, sUsageFrequency);
-		}
-		if (!sDealDescription.equalsIgnoreCase("NoValue")) {
-			CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealDescription_TextBox, sDealDescription);
-		}
-		if (!sDealVersionDescription.equalsIgnoreCase("NoValue")) {
-			CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealVersionDescription_TextBox, sDealVersionDescription);
-		}
-		if (!sSkipReference.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_SkipReference_CheckBox);
-		}
-		if (!sSkipQuestionnaire.equalsIgnoreCase("NoValue")) {
-			CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_SkipQuestionnaire_CheckBox);
-		}
-		/* Uncomment this code only if this is required.
-	  *   if(!sTemplateDeal.equalsIgnoreCase("NoValue"))
-	        {
-				CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_TemplateDeal_CheckBox);    										
+			if (!sDealCurrency.equalsIgnoreCase("NoValue")) {
+				Thread.sleep(5000);
+				CF.FnSetFrame(driver, "zoneMapFrame_2");
+				Thread.sleep(2000);
+				CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_DealCurrency_DropDown, sDealCurrency);
 			}
-	  */
-		//Uncomment this code only if this is required.
-		/*
-			        if(!sTnC1.equalsIgnoreCase("NoValue"))
-			        {
-						CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC1_TextBox,sTnC1);    										
-					}
-			       
-			        if(!sTnC2.equalsIgnoreCase("NoValue"))
-			        {
-				        CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_TNC1Plus_Icon);
-						CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC2_TextBox,sTnC2);    										
-					}
-			       
-			        if(!sTnC3.equalsIgnoreCase("NoValue"))
-			        {
-				        CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_TNC2Plus_Icon);
-						CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC3_TextBox,sTnC3);    										
-					}  */
-		CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Save_Button);
-		Thread.sleep(8000);
-		sDealIDValue1 = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_DealID_TextBox).getAttribute("value");
-		System.out.println("Deal ID by value is " + sDealIDValue1);
-		assertTrue(!sDealIDValue1.isEmpty(), "Deal ID is generated and Deal ID is not empty");
-		CF.FnTestCaseStatusReport("Pass", "Deal Is Created Successfully. Deal ID-> " + sDealIDValue1);
-	} catch (Exception e) {
-		System.out.println("Application Function Exception occured ->" + e.getLocalizedMessage());
-		e.printStackTrace();
-		BaseTest.eFlgFound = "false";
-		CF.FnTestCaseStatusReport("Fail", "Application Function Exception occured ->\n" + CF.erromsg(e));
+			if (!sSimulationType.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_SimulationType_DropDown, sSimulationType);
+			}
+			if (!sStartDate.equalsIgnoreCase("NoValue")) {
+				CF.FnSetText(driver, DealManagementPageElements.Deal_Information_StartDate_DateField, sStartDate);
+			}
+			if (!sPriceSelectionDate.equalsIgnoreCase("NoValue")) {
+				CF.FnSetText(driver, DealManagementPageElements.Deal_Information_PriceSelectionDate_DateField, sPriceSelectionDate);
+			}
+			if (!sReviewFrequency.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_ReviewFrequency_DropDown, sReviewFrequency);
+			}
+			if (!sDealFrequency.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_DealFrequency_DropDown, sDealFrequency);
+			}
+			if (!sUsageFrequency.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectValue(driver, DealManagementPageElements.Deal_Information_UsagePeriod_DropDown, sUsageFrequency);
+			}
+			if (!sDealDescription.equalsIgnoreCase("NoValue")) {
+				CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealDescription_TextBox, sDealDescription);
+			}
+			if (!sDealVersionDescription.equalsIgnoreCase("NoValue")) {
+				CF.FnSetText(driver, DealManagementPageElements.Deal_Information_DealVersionDescription_TextBox, sDealVersionDescription);
+			}
+			if (!sSkipReference.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_SkipReference_CheckBox);
+			}
+			if (!sSkipQuestionnaire.equalsIgnoreCase("NoValue")) {
+				CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_SkipQuestionnaire_CheckBox);
+			}
+			/* Uncomment this code only if this is required.
+		  *   if(!sTemplateDeal.equalsIgnoreCase("NoValue"))
+				{
+					CF.FnSelectCheckBox(driver, DealManagementPageElements.Deal_Information_TemplateDeal_CheckBox);    										
+				}
+		  */
+			//Uncomment this code only if this is required.
+			/*
+						if(!sTnC1.equalsIgnoreCase("NoValue"))
+						{
+							CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC1_TextBox,sTnC1);    										
+						}
+					   
+						if(!sTnC2.equalsIgnoreCase("NoValue"))
+						{
+							CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_TNC1Plus_Icon);
+							CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC2_TextBox,sTnC2);    										
+						}
+					   
+						if(!sTnC3.equalsIgnoreCase("NoValue"))
+						{
+							CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_TNC2Plus_Icon);
+							CF.FnSetText(driver, DealManagementPageElements.Deal_Information_TNC3_TextBox,sTnC3);    										
+						}  */
+			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Save_Button);
+			Thread.sleep(8000);
+			sDealIDValue1 = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_DealID_TextBox).getAttribute("value");
+			System.out.println("Deal ID by value is " + sDealIDValue1);
+			assertTrue(!sDealIDValue1.isEmpty(), "Deal ID is generated and Deal ID is not empty");
+			CF.FnTestCaseStatusReport("Pass", "Deal Is Created Successfully. Deal ID-> " + sDealIDValue1);
+		} catch (Exception e) {
+			System.out.println("Application Function Exception occured ->" + e.getLocalizedMessage());
+			e.printStackTrace();
+			BaseTest.eFlgFound = "false";
+			CF.FnTestCaseStatusReport("Fail", "Application Function Exception occured ->\n" + CF.erromsg(e));
+		}
+		return sDealIDValue1;
 	}
-	return sDealIDValue1;
-}
 
 	/*'############################################################################################################################################################################################################################################
 	'Function Name        : FnNavigationToDealInformationFromDealCreation
@@ -7728,7 +7728,7 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 
 				WebElement SingleWebElement = driver.findElement(By.xpath(DealManagementPageElements.Deal_Approval_Workflow_Approval_History_Table + "[" + SingleRecord + "]"));
 
-
+				
 				sSequenceFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sSequenceApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
 				sProcessFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sProcessApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
 				sApprovalTypeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sApprovalTypeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
@@ -7741,7 +7741,7 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 				sCreateDateTimeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sCreateDateTimeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
 				sUpdateDateTimeFromApplication =  CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.sUpdateDateTimeApprovalHistoryPath + "[" + SingleRecord + "]").getAttribute("innerText");
 
-				
+
 				sCreateDateTimeFromApplication = sCreateDateTimeFromApplication.split("\\ ")[0];
 				sUpdateDateTimeFromApplication = sUpdateDateTimeFromApplication.split("\\ ")[0];
 
@@ -8219,7 +8219,7 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 
 			CF.FnSetFrame(driver, "uiMap");
 			Thread.sleep(500);
-			
+						
 			if(!sVerifyPriceItemRate.equalsIgnoreCase("NoValue")) {
 				
 				String SystemPriceItemRate = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen.replaceAll("ReplacePriceItem", sPriceItem)).getAttribute("value");
@@ -8232,134 +8232,134 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 			if(!sUpdatePriceItemRate.equalsIgnoreCase("NoValue")) {
 				
 				
-				
-				String PriceItemRateTextBox = DealManagementPageElements.Deal_PriceItem_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen.replaceAll("ReplacePriceItem", sPriceItem);
 
-				System.out.println("sizeeeee - " + sPriceItem + " : " + PriceItemRateTextBox + CF.getListWebElements(driver, "XPATH", PriceItemRateTextBox).size());
+			String PriceItemRateTextBox = DealManagementPageElements.Deal_PriceItem_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen.replaceAll("ReplacePriceItem", sPriceItem);
 
-				if (CF.getListWebElements(driver, "XPATH", PriceItemRateTextBox).size() != 0) {
+			System.out.println("sizeeeee - " + sPriceItem + " : " + PriceItemRateTextBox + CF.getListWebElements(driver, "XPATH", PriceItemRateTextBox).size());
 
-					System.out.println("sizeeeee 111 - " + sPriceItem + " : " + PriceItemRateTextBox);
+			if (CF.getListWebElements(driver, "XPATH", PriceItemRateTextBox).size() != 0) {
 
-					CF.FnWaitForElement(driver, 360, PriceItemRateTextBox);
+				System.out.println("sizeeeee 111 - " + sPriceItem + " : " + PriceItemRateTextBox);
+
+				CF.FnWaitForElement(driver, 360, PriceItemRateTextBox);
 //					CF.FnElementClick(driver, PriceItemRateTextBox);
-					Thread.sleep(500);
-					CF.FnClearTextFieldValue(driver, PriceItemRateTextBox);
-					Thread.sleep(100);
+				Thread.sleep(500);
+				CF.FnClearTextFieldValue(driver, PriceItemRateTextBox);
+				Thread.sleep(100);
 
-					WebDriverWait w = new WebDriverWait(driver, 60);
+				WebDriverWait w = new WebDriverWait(driver, 60);
 
-					try {
-						//alertIsPresent() condition applied
-						if (w.until(ExpectedConditions.alertIsPresent()) != null) {
-							System.out.println("Alert exists");
-							driver.switchTo().alert().dismiss();
-						}
-						CF.FnSetFrame(driver, "uiMap");
-						Thread.sleep(1000);
-						CF.FnWaitForElement(driver, 60, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
-						CF.FnElementClick(driver, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
-					} catch (Exception e) {
-						System.out.println("######");
+				try {
+					//alertIsPresent() condition applied
+					if (w.until(ExpectedConditions.alertIsPresent()) != null) {
+						System.out.println("Alert exists");
+						driver.switchTo().alert().dismiss();
 					}
-
-					try {
-						CF.FnGetWebElement(driver, "XPATH", PriceItemRateTextBox).sendKeys(sUpdatePriceItemRate);
-						Thread.sleep(200);
-						CF.FnMoveToElementAndClick(driver, DealManagementPageElements.Pricing_And_Commitments_ExpandAll_Button);
-
-						for (int alertsCount = 1; alertsCount <= 3; alertsCount++) { //throwing 2-3 alert messages
-
-							if (w.until(ExpectedConditions.alertIsPresent()) != null) {
-								String AlertWarningMessageFromApplication = driver.switchTo().alert().getText();
-								System.out.println(sPriceItem + "  || AlertWarningMessageFromApplication:-" + AlertWarningMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
-								if (AlertWarningMessageFromApplication.contains(VerifyValidationMessage)) {
-									if (alertsCount == 1) {
-										assertTrue(AlertWarningMessageFromApplication.contains(VerifyValidationMessage));
-										System.out.println("passed");
-										driver.switchTo().alert().dismiss();
-										CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Throwing Expected Alert i.e " + VerifyValidationMessage + " for input - " + sUpdatePriceItemRate);
-									}
-
-								} else {
-									System.err.println(alertsCount + " || " + sPriceItem + "  || AlertWarningMessageFromApplication:-" + AlertWarningMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
-									// assertTrue(AlertWarningMessageFromApplication.contains(VerifyValidationMessage));
-
-									// two validation on alert i.e numeric and range
-								}
-								System.out.println("Alert Exists - dismissed");
-								Thread.sleep(500);
-								if (w.until(ExpectedConditions.alertIsPresent()) != null) {
-
-									if (AlertWarningMessageFromApplication.contains("Please enter the rate value between Floor")) {
-
-										System.out.println("passed 11");
-										driver.switchTo().alert().dismiss();
-										CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Throwing Expected Alert i.e " + AlertWarningMessageFromApplication + " for Rate:-" + sUpdatePriceItemRate + " on Pricing Screen");
-
-									}
-
-								} else if (w.until(ExpectedConditions.alertIsPresent()) == null) {
-									break;
-								}
-								Thread.sleep(500);
-
-							}
-						}
-					} catch (Exception er) {}
-
 					CF.FnSetFrame(driver, "uiMap");
 					Thread.sleep(1000);
+					CF.FnWaitForElement(driver, 60, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
+					CF.FnElementClick(driver, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
+				} catch (Exception e) {
+					System.out.println("######");
+				}
 
-					System.out.println("444444444");
+				try {
+					CF.FnGetWebElement(driver, "XPATH", PriceItemRateTextBox).sendKeys(sUpdatePriceItemRate);
+					Thread.sleep(200);
+					CF.FnMoveToElementAndClick(driver, DealManagementPageElements.Pricing_And_Commitments_ExpandAll_Button);
 
-					if (driver.findElements(By.xpath(DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen)).size() != 0 && CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isDisplayed()) {
+					for (int alertsCount = 1; alertsCount <= 3; alertsCount++) { //throwing 2-3 alert messages
 
-						System.out.println("display:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isDisplayed());
-						System.out.println("en:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isEnabled());
-						System.out.println("select:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isSelected());
+						if (w.until(ExpectedConditions.alertIsPresent()) != null) {
+							String AlertWarningMessageFromApplication = driver.switchTo().alert().getText();
+							System.out.println(sPriceItem + "  || AlertWarningMessageFromApplication:-" + AlertWarningMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+							if (AlertWarningMessageFromApplication.contains(VerifyValidationMessage)) {
+								if (alertsCount == 1) {
+									assertTrue(AlertWarningMessageFromApplication.contains(VerifyValidationMessage));
+									System.out.println("passed");
+									driver.switchTo().alert().dismiss();
+									CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Throwing Expected Alert i.e " + VerifyValidationMessage + " for input - " + sUpdatePriceItemRate);
+								}
 
-						System.out.println("innnn");
-						String ErrorValidationMessageFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).getAttribute("innerText");
+							} else {
+								System.err.println(alertsCount + " || " + sPriceItem + "  || AlertWarningMessageFromApplication:-" + AlertWarningMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+								// assertTrue(AlertWarningMessageFromApplication.contains(VerifyValidationMessage));
 
-						Thread.sleep(1000);
-						CF.FnWaitForElement(driver, 360, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
-						CF.FnElementClick(driver, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
+								// two validation on alert i.e numeric and range
+							}
+							System.out.println("Alert Exists - dismissed");
+							Thread.sleep(500);
+							if (w.until(ExpectedConditions.alertIsPresent()) != null) {
 
-						System.out.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+								if (AlertWarningMessageFromApplication.contains("Please enter the rate value between Floor")) {
 
-						if (VerifyValidationMessage.contains("Only numeric values are allowed")) {
-							System.err.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
-						} else if (!ErrorValidationMessageFromApplication.equals(VerifyValidationMessage)) {
-							System.err.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
-							assertTrue(ErrorValidationMessageFromApplication.contains(VerifyValidationMessage));
-						} else {
-							//  CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Validation Verification Is Completed Successfully on Pricing & commitment screen.");
-							assertTrue(ErrorValidationMessageFromApplication.contains(VerifyValidationMessage));
+									System.out.println("passed 11");
+									driver.switchTo().alert().dismiss();
+									CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Throwing Expected Alert i.e " + AlertWarningMessageFromApplication + " for Rate:-" + sUpdatePriceItemRate + " on Pricing Screen");
+
+								}
+
+							} else if (w.until(ExpectedConditions.alertIsPresent()) == null) {
+								break;
+							}
+							Thread.sleep(500);
+
 						}
-
-
-					} else {
-						System.out.println("elseeeeeee");
-						CF.FnTestCaseStatusReport("Pass", "Price Item :- " + sPriceItem + " Rate Updated Successfully as " + sUpdatePriceItemRate);
 					}
+				} catch (Exception er) {}
 
+				CF.FnSetFrame(driver, "uiMap");
+				Thread.sleep(1000);
+
+				System.out.println("444444444");
+
+				if (driver.findElements(By.xpath(DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen)).size() != 0 && CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isDisplayed()) {
+
+					System.out.println("display:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isDisplayed());
+					System.out.println("en:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isEnabled());
+					System.out.println("select:-" + CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).isSelected());
+
+					System.out.println("innnn");
+					String ErrorValidationMessageFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen).getAttribute("innerText");
+
+					Thread.sleep(1000);
+					CF.FnWaitForElement(driver, 360, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
+					CF.FnElementClick(driver, DealManagementPageElements.Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen);
+
+					System.out.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+
+					if (VerifyValidationMessage.contains("Only numeric values are allowed")) {
+						System.err.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+					} else if (!ErrorValidationMessageFromApplication.equals(VerifyValidationMessage)) {
+						System.err.println(sPriceItem + "  || ErrorValidationMessageFromApplication:-" + ErrorValidationMessageFromApplication + " || VerifyValidationMessage:-" + VerifyValidationMessage);
+						assertTrue(ErrorValidationMessageFromApplication.contains(VerifyValidationMessage));
+					} else {
+						//  CF.FnTestCaseStatusReport("Pass", "Price Item :-" + sPriceItem + " Validation Verification Is Completed Successfully on Pricing & commitment screen.");
+						assertTrue(ErrorValidationMessageFromApplication.contains(VerifyValidationMessage));
+					}
 
 
 				} else {
-					System.out.println("Price Item Rate TextBox not Visible as Intended for :-" + sPriceItem);
-					if (sUpdatePriceItemRate.equals("NoValue")) {
-						if (!sUpdatePriceItemRate.equals("")) {
-							CF.FnTestCaseStatusReport("Pass", "Rate Textbox Does not Exists for Price Item :-" + sPriceItem + " as intended on Pricing & commitment screen.");
-						}
-					}
+					System.out.println("elseeeeeee");
+					CF.FnTestCaseStatusReport("Pass", "Price Item :- " + sPriceItem + " Rate Updated Successfully as " + sUpdatePriceItemRate);
 				}
 
 
-				
-				
+
+			} else {
+				System.out.println("Price Item Rate TextBox not Visible as Intended for :-" + sPriceItem);
+				if (sUpdatePriceItemRate.equals("NoValue")) {
+					if (!sUpdatePriceItemRate.equals("")) {
+						CF.FnTestCaseStatusReport("Pass", "Rate Textbox Does not Exists for Price Item :-" + sPriceItem + " as intended on Pricing & commitment screen.");
+					}
+				}
 			}
-	
+
+
+				
+				
+		}
+
 
 
 
@@ -10678,11 +10678,13 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 
 		System.out.println("sPersonName:-" + sPersonName);
 		System.out.println("sPersonAccount:-" + sPersonAccount);
+		System.out.println("sContractId:-" + sContractId);
 		System.out.println("sPriceItem:-" + sPriceItem);
 		System.out.println("sBillableChargeStartDate:-" + sBillableChargeStartDate);
 		System.out.println("sBillableChargeEndDate:-" + sBillableChargeEndDate);
 		System.out.println("sServiceQtyIdentifier:-" + sServiceQtyIdentifier);
 		System.out.println("sServiceQty:-" + sServiceQty);
+		System.out.println("sBillableChargeId:-" + sBillableChargeId);
 
 
 		try {
@@ -10694,11 +10696,7 @@ public String FnDealCreation(int iStartingRow, String sSheetName, String sWorkbo
 			Date sBillableChargeEndDateOld = new SimpleDateFormat("mm-dd-yyyy").parse(sBillableChargeEndDate);
 		    String sBillableChargeEndDate1 = new SimpleDateFormat("dd-MMM-yy").format(sBillableChargeEndDateOld);
 
-//			String IsBillableChargeAdded = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT COUNT(*) FROM CI_BILL_CHG WHERE SA_ID = '" + sContractId + "' and PRICEITEM_CD = '"+sPriceItem+"' and START_DT = '"+sBillableChargeStartDate1+"' and END_DT = '"+sBillableChargeEndDate1+"'", "COUNT(*)", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
-//			String IsBillableChargeAdded = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT COUNT(*) FROM CI_BILL_CHG WHERE SA_ID = '" + sContractId + "' and PRICEITEM_CD = '"+sPriceItem+"'", "COUNT(*)", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
 			String IsBillableChargeAdded = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT COUNT(*) FROM CI_BILL_CHG FULL JOIN CI_BCHG_SQ ON CI_BILL_CHG.BILLABLE_CHG_ID = CI_BCHG_SQ.BILLABLE_CHG_ID WHERE SA_ID = '"+sContractId+"' and PRICEITEM_CD = '"+sPriceItem+"' and SVC_QTY = '"+sServiceQty+"'", "COUNT(*)", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
-
-//			System.out.println("IsBillableChargeAdded:-" + IsBillableChargeAdded);
 
 			if (IsBillableChargeAdded.equalsIgnoreCase("0")) {
 				

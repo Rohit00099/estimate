@@ -38,7 +38,7 @@ public class deal_mangement extends BaseTest {
     public static Boolean OnlineSimulation = true;
     public static Boolean IwsSimulation = false;
 
-   
+    
 
     @BeforeClass
     public void beforeClass() throws Exception {
@@ -60,7 +60,7 @@ public class deal_mangement extends BaseTest {
 
     }
 
-
+    
 
 
 
@@ -957,7 +957,7 @@ public class deal_mangement extends BaseTest {
 
 
     /***********************************************************************************************************************************************************
-     * Written by					:   	Ajinkya Joshi
+     * Written by					:   	Rohit Thik
      * Script Name					:  		Currency Conversion
      * Script Description			: 		Currency Conversion - Test 39126	
      * Manual Test Scenario covered	: 		Yes
@@ -1009,7 +1009,7 @@ public class deal_mangement extends BaseTest {
                 DB.FnUpdateBillableChargeDates(77, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(78, sSheetName, sWorkbook);
 
-                String DealId = "6808625427";
+                String DealId = "3734785295";
 
                 boolean skipDealCreation = false;
 
@@ -1416,7 +1416,7 @@ public class deal_mangement extends BaseTest {
                 //Function for Navigation To Deal Information From Pricing And Commitments
                 dealManagementPageEvents.FnNavigationToDealInformationFromPricingAndCommitments();
 
-
+                
                 //Function To verify Personal Hierarchy Information On Deal Information
                 dealManagementPageEvents.FnVerifyPersonalHierarchyInformationOnDealInformation(409, sSheetName, sWorkbook);
 
@@ -1924,7 +1924,7 @@ public class deal_mangement extends BaseTest {
                 //Function to Navigate to view and edit pricing on Pricing and commitment screen
                 dealManagementPageEvents.FnNavigateToViewAndEditPricing();
 
-
+                
                 //NPI_021
                 dealManagementPageEvents.FnVerifyPriceItemsRatesOnPricingAndCommitmentScreen(120, sSheetName, sWorkbook);
 
@@ -2435,18 +2435,18 @@ public class deal_mangement extends BaseTest {
                 DM.FnPricingAndCommitmentIWS(202, sSheetName, sWorkbook, sDealId, "NoValue", "NoValue");
 
 
-//                // To Change user for sending new request
-//                WF.FnUserChange("PMBK1");
-//
-//                //################ Deal Simulation IWS ####################//
-//                String sSimulateDeal5 = "{\"C1-DealREST\":{\"actionFlag\":\"UPD\",\"dealOperation\":{\"operationFlag\":\"SMLD\",\"modelId\":\"" + smodelId + "\"}}}";
-//                DM.FnSimulateDealByRequest(sSimulateDeal5, sCreateDealResource, sContentTypeHeader, sAcceptTypeHeader);
+                // To Change user for sending new request
+                WF.FnUserChange("PMBK1");
+
+                //################ Deal Simulation IWS ####################//
+                String sSimulateDeal5 = "{\"C1-DealREST\":{\"actionFlag\":\"UPD\",\"dealOperation\":{\"operationFlag\":\"SMLD\",\"modelId\":\"" + smodelId + "\"}}}";
+                DM.FnSimulateDealByRequest(sSimulateDeal5, sCreateDealResource, sContentTypeHeader, sAcceptTypeHeader);
 
 
                 //################ Return Deal To Submitter IWS ####################//
                 String ReturnDealtoSubmitter = "{\"C1-DealREST\":{\"actionFlag\":\"UPD\",\"dealOperation\":{\"operationFlag\":\"RETN\",\"dealId\":\"" + sDealId + "\",\"division\":\"IND\",\"comments\":\"Recommended Price Item\",\"rejectReasonCode\":\"RETURN\"}}}";
                 DM.FnReturnDealToSubmitterUsingIWS(sCreateDealResource, ReturnDealtoSubmitter, sContentTypeHeader, sAcceptTypeHeader);
-
+                
                 // Login Change to RMBK1 User
                 WF.FnUserChange("RMBK1");
 
