@@ -4732,6 +4732,7 @@ public class deal_mangement extends BaseTest {
 
                 //Function to update "Stacking Required" Option as Y
                 dealManagementPageEvents.FnUpdateAlgorithmValue(163, sSheetName, sWorkbook);
+                dealManagementPageEvents.FnUpdateAlgorithmValue(164, sSheetName, sWorkbook);
 
                 String sDateName = CommonFunctions.FnGetUniqueId();
                 String sDealIdentifier1 = CF.FnGetCellValue(90, 3, sSheetName, sWorkbook).toString().trim();
@@ -6055,6 +6056,7 @@ public class deal_mangement extends BaseTest {
 
                 //Function to update "Stacking Required" Option as N
                 dealManagementPageEvents.FnUpdateAlgorithmValue(233, sSheetName, sWorkbook);
+                dealManagementPageEvents.FnUpdateAlgorithmValue(234, sSheetName, sWorkbook);
 
 
 
