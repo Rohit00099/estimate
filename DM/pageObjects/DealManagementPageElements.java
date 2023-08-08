@@ -59,7 +59,7 @@ public interface DealManagementPageElements
 	String Deal_Information_ViewAndAssignProposedPriceList_PencilIcon ="View and Assign Proposed PriceList";
 	String Deal_Information_ExpandAll_Button ="//*[@id='expandAll']";
 	String Deal_Price_Item_Group_Selection_ExpandAll_Button ="//*[@id='expandAll']";
-	String Deal_Information_PersonalHierarchyPersonName_Label ="(//tr/td/div[@class='personDataCell']/span)[1]";
+	String Deal_Information_PersonalHierarchyPersonName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td/div[@class=\"personDataCell\"]/span)[1]";
 	String Deal_Information_PersonalHierarchyDivisionName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td[3]/div)";
 	String Deal_Information_PersonalHierarchyRevenueVariationValue_Label ="(//*[@class='oj-fwk-icon oj-fwk-icon-arrow-n oj-menu-item-end-icon upiconSld']/following-sibling::span)";
 	String Deal_Information_PersonalHierarchyProjectedRevenueValue_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td//div[@class='rowDataCell proposedData ellipsis'])[1]";
@@ -100,12 +100,12 @@ public interface DealManagementPageElements
 	String Pricing_And_Commitments_NoDataDisplayedAfterPrizeItemSearch_Button ="//*[@class='oj-table-body-message'][contains(text(),'No data to display.')]";
 	String Select_Prize_Item_group_Title_Label ="//*[@oramdlabel='SEL_PRICEITM_GRP_LBL']";
 	String Select_Prize_Item_group_Filters_Label ="//*[@oramdlabel='F1_FILTERS_LBL']";
-	String Select_Prize_Item_group_AssignmentLevel_Filters_Label ="id='oj-searchselect-filter-assignmentLevel|input'";
+	String Select_Prize_Item_group_AssignmentLevel_Filters_Label ="id=\"oj-searchselect-filter-assignmentLevel|input\"";
 	String Select_Prize_Item_group_FilterExpand_Label ="//*[@oramdlabel='F1_FILTERS_LBL']/parent::h1/img";
 	String Select_Prize_Item_group_SearchFilters_TextBox ="//*[@id='filter|input']";
 	String Select_Prize_Item_group_Clear_SearchFilters ="//*[@id='resetFilter_oj4|text']";
 	String Select_Prize_Item_group_SearchFilters_Apply_Button = "//*[@aria-labelledby='filter_oj2|text']";
-	String Pricing_And_Commitments_ApprovalStatus_Image = "//*[@data-bind='attr: { \'src\': getStatusSrc(($context.$context?.row.attr.prodMngrtPriceItemApprFlag || $context.row.attr.prodMngrtPriceItemApprFlag === \'Y\'), $context.$context?.row.attr.statusCd || $context.row.attr.statusCd), \'alt\':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd, \'title\':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd}']";
+	String Pricing_And_Commitments_ApprovalStatus_Image = "//*[@data-bind=\"attr: { \'src\': getStatusSrc(($context.$context?.row.attr.prodMngrtPriceItemApprFlag || $context.row.attr.prodMngrtPriceItemApprFlag === \'Y\'), $context.$context?.row.attr.statusCd || $context.row.attr.statusCd), \'alt\':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd, \'title\':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd}\"]";
 	String Select_Prize_Item_group_PrizeItemCheckBoxAfterSearch_Checkbox ="(//*[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-unselected'])[3]";
 	String Select_Prize_Item_group_PrizeItemSecondCheckBoxAfterSearch_Checkbox ="(//*[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-unselected'])[4]";
 	String Select_Prize_Item_group_PrizeItemThirdCheckBoxAfterSearch_Checkbox ="(//*[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-unselected'])[5]";
@@ -113,7 +113,7 @@ public interface DealManagementPageElements
 	String Select_Prize_Item_group_PrizeItemSecondSelectedCheckBoxAfterSearch_Checkbox ="(//*[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-selected'])[4]";
 	String Select_Prize_Item_group_PrizeItemThirdSelectedCheckBoxAfterSearch_Checkbox ="(//*[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-selected'])[5]";
 	String Select_Prize_Item_group_NoDatatoDisplayMessage_Label ="(//*[contains(text(),'No data to display.')])[1]";
-	String Select_Prize_Item_group_AssignmentLevel_DropDown = "//*[@id='assignmentLevel']/div[2]/span/a";
+	String Select_Prize_Item_group_AssignmentLevel_DropDown = "//*[@id=\"assignmentLevel\"]/div[2]/span/a";
 	String Select_Prize_Item_group_AssignmentLevel_Value_From_DropDown = "//*[@text='ReplacePriceAssignmentValue']";
 	String Select_Prize_Item_group_AssignmentLevel_DropDown_Value = "//*[@data-oj-containerid='assignmentLevel']//li//oj-highlight-text[@text='ReplacePriceAssignmentStatus']";
 	String Select_Prize_Item_group_SelectAll_Button = "//*[@id='selectAll_oj7|text'][(text()='Select All')]";
@@ -130,8 +130,8 @@ public interface DealManagementPageElements
 	String Pricing_And_Commitments_TermsAndConditionsForAccountServices_PencilIcon ="(//*[@id='button1|text']/*[@title='Terms And Conditions'])[2]";
 	String Pricing_And_Commitments_CollapseAll_Button ="//*[@aria-level='3']/following-sibling::div[@id='hrchysec']/oj-button[@id='collapseAll']/button[@aria-labelledby='collapseAll|text']";
 	String Pricing_And_Commitments_TermsAndConditionsForFirstPrizeItem_PencilIcon ="(//*[@id='button1|text']/*[@title='Terms And Conditions'])[3]";
-	String Pricing_And_Commitments_LowerBack_Button_0 = "(//*[@oramdlabel='BACK_LBL'])[2]";
-	String Pricing_And_Commitments_LowerBack_Button =  "(//*[@oramdlabel=\'BACK_LBL\' and @onclick='oraSubmitMap('CANCEL',false); errorText();'])[1]";		//"//*[@id='buttonDiv']/*/*[@oramdlabel='BACK_LBL']";
+	String Pricing_And_Commitments_LowerBack_Button_0 = "(//*[@oramdlabel=\"BACK_LBL\"])[2]";
+	String Pricing_And_Commitments_LowerBack_Button =  "(//*[@oramdlabel=\'BACK_LBL\' and @onclick=\"oraSubmitMap('CANCEL',false); errorText();\"])[1]";		//"//*[@id='buttonDiv']/*/*[@oramdlabel='BACK_LBL']";
 	String Pricing_And_Commitments_ExpandAll_Button ="//*[text()='Expand All']";
 	String Pricing_And_Commitments_CommitmentsAndVolumeForCorporateBanking_Image ="(//*[@id='button1|text']/img[@title='Commitments-Volume'])[1]";
 	String Pricing_And_Commitments_CommitmentsAndVolumeForAccountServices_Image ="(//*[@id='button1|text']/img[@title='Commitments-Volume'])[2]";
@@ -141,12 +141,12 @@ public interface DealManagementPageElements
 	String Pricing_And_Commitments_CommitmentsAndVolumeForReportingAndSwift2_Image ="(//*[@id='button1|text']/img[@title='Commitments-Volume'])[5]";
 	String Pricing_And_Commitments_DailyServiceQuantity_TextBox ="//*[@id='dailyServiceQuantityProp_0']";
 	String Pricing_And_Commitments_LowerBackServiceQtyScreen_Button ="//*[@id='recommendCom']/following-sibling::input[@oramdlabel='BACK_LBL']";
-	String Pricing_And_Commitments_TotalRevenueCorporateBanking_Label = "(//*[@data-bind=\"\'attr\':{\'title\':$parent.isLocalData() == \'DEAL\' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}\"])[1]";
-	String Pricing_And_Commitments_TotalCostCorporateBanking_Label = "(//*[@data-bind=\"\'attr\':{\'title\':$parent.isLocalData() == \'DEAL\' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"])[1]";
-	String Pricing_And_Commitments_TotalRevenueAccountServices_Label = "(//*[@data-bind=''attr\':{\'title\':$parent.isLocalData() == \'DEAL\' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}'])[2]";
-	String Pricing_And_Commitments_TotalCostAccountServices_Label ="(//*[@data-bind=''attr\':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}'])[2]";
-	String Pricing_And_Commitments_TotalRevenueReportingAndSwift_Label ="(//*[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}'])[3]";
-	String Pricing_And_Commitments_TotalCostReportingAndSwift_Label ="(//*[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}'])[3]";
+	String Pricing_And_Commitments_TotalRevenueCorporateBanking_Label ="(//*[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}\"])[1]";
+	String Pricing_And_Commitments_TotalCostCorporateBanking_Label ="(//*[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"])[1]";
+	String Pricing_And_Commitments_TotalRevenueAccountServices_Label = "(//*[@data-bind=\"'attr\':{\'title\':$parent.isLocalData() == \'DEAL\' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}\"])[2]";
+	String Pricing_And_Commitments_TotalCostAccountServices_Label ="(//*[@data-bind=\"'attr\':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"])[2]";
+	String Pricing_And_Commitments_TotalRevenueReportingAndSwift_Label ="(//*[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}\"])[3]";
+	String Pricing_And_Commitments_TotalCostReportingAndSwift_Label ="(//*[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"])[3]";
 	String Pricing_And_Commitments_UpperBack_Button ="//*[@id='checkLimit']/following-sibling::input[@id='backLbl']";
 	String Adhoc_Revenue_And_Cost_Title_Label ="//*[@class='oraPageTitle'][contains(text(),'Adhoc Revenue and Cost')]";
 	String Adhoc_Revenue_And_Cost_Sequence1_TextBox ="//*[@id='sequence_0']";
@@ -266,26 +266,15 @@ public interface DealManagementPageElements
 	String Deal_Information_Status_Approved = "//*[@oramdlabel='C1_APPROVED_LBL']/parent::span/img";
 	String Deal_division_Financial_Summary_Status = "(//img[@id='divFinSummaryStatusflg'])[1]";
 	String Search_Deal_Section = "(//*[contains(text(),'Search Deal')])[1]";
-	String Search_Deal_Expand_Filter_Button = "(//*[@value='Expand Filters'])"; //"//*[.//tr//label[text()='Search By']]/tr//input[@value='Expand Filters']"; //"//*[@onload='setZoneExpandToolTip(this, 'Search Deal')']";  //Updated 13012023
+	String Search_Deal_Expand_Filter_Button = "(//*[@value='Expand Filters'])"; //"//*[.//tr//label[text()='Search By']]/tr//input[@value='Expand Filters']"; //"//*[@onload=\"setZoneExpandToolTip(this, 'Search Deal')\"]";  //Updated 13012023
 	String Deal_Dashboard_Search_Assign_To_My_Role = "//*[@orafield='assignedApprovalTask']";
 	String Deal_Dashboard_SearchDealLower_Button1 = "(//*[@value='Search'])[2]";
 	String Deal_Dashboard_Search_Deal_Result_Record = "//span[@title='Go To Prospect Hierarchy ' and contains(text(),'ReplaceDealId')]";
 	String Deal_Approval_Workflow_ToDoRoleValue_Label ="(//*[@orafield='toDoRole'])";
 	String Deal_Approval_Workflow_ToDoRoleActionTakenValue_Label ="(//*[@orafield='dealApprStatus'])";
 	String Deal_Approval_Workflow_Approval_History_Table = "(//*[@id='dealWorkflowTabular']//tbody)";
-	String sSequenceApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'sequence\'])";
-	String sProcessApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'workflowLbl\'])";
-	String sApprovalTypeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//th[@orafield=\'profileType\'])";
-	String sDivisionApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'division\'])";
-	String sProductApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'product\'])";
-	String sApprovalLevelApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'dealLevel\'])";
-	String sToDoRoleApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'toDoRole\'])";
-	String sUserNameApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'approverUserId\'])";
-	String sActionTakenApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'dealApprStatus\'])";
-	String sCreateDateTimeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'creationDateTime\'])";
-	String sUpdateDateTimeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'updateDateTime\'])";
 	String Deal_Information_Customer_Status_On_Personalhierarchy = "(//*[.//text()='ReplacePersonName']/ancestor::tr/td[2]/div/img)[1]";
-	String Deal_Information_Customer_Status_On_Personalhierarchy1 = "(//div[starts-with(@class,'rowDataCell centerAlign')]/img[@class='statusFlag'])[1]";
+	String Deal_Information_Customer_Status_On_Personalhierarchy1 = "(//*[@class=\"statusFlag\"])[1]";
 	String Deal_Information_Deal_Status = "//*[@class='summaryDiv']/label[@orafield='status']";
 	String Deal_Information_Deal_Version_Status = "//*[@class='summaryDiv']/label[@orafield='model/status']";
 	String Deal_Information_Product_Financial_Summary_On_Pricing_And_Commitment_screen = "//tr/td[@orafield='productCode2' and text()='ReplaceProductName']/parent::tr";
@@ -310,10 +299,10 @@ public interface DealManagementPageElements
 	String DivisionProposedOGRevenueVariationPath = "(//oj-table[@id=\'tableFinSmryDivi\']//tr/td[5]/div/div/div[2])[1]";
 	String DivisionProposedOGProfitVariationPath = "(//oj-table[@id=\'tableFinSmryDivi\']//tr/td[6]/div/div/div[2])[1]";
 
-	String DivisionOriginalRevenuePath = "(//oj-table[@id='tableFinSmryDivi']//tr/td/div[@class='rowDataCell originalData ellipsis'])[1]";
-	String DivisionOriginalCostPath = "(//oj-table[@id='tableFinSmryDivi']//tr/td/div[@class='rowDataCell originalData ellipsis'])[2]";
-	String DivisionOriginalProfitPath = "(//oj-table[@id='tableFinSmryDivi']//tr/td/div[@class='rowDataCell originalData ellipsis'])[3]";
-	String DivisionOriginalProfitabilityPath = "(//oj-table[@id='tableFinSmryDivi']//tr/td/div[@class='rowDataCell originalData ellipsis'])[4]";
+	String DivisionOriginalRevenuePath = "(//oj-table[@id=\"tableFinSmryDivi\"]//tr/td/div[@class='rowDataCell originalData ellipsis'])[1]";
+	String DivisionOriginalCostPath = "(//oj-table[@id=\"tableFinSmryDivi\"]//tr/td/div[@class='rowDataCell originalData ellipsis'])[2]";
+	String DivisionOriginalProfitPath = "(//oj-table[@id=\"tableFinSmryDivi\"]//tr/td/div[@class='rowDataCell originalData ellipsis'])[3]";
+	String DivisionOriginalProfitabilityPath = "(//oj-table[@id=\"tableFinSmryDivi\"]//tr/td/div[@class='rowDataCell originalData ellipsis'])[4]";
 
 	
 	String DivisionStandardRevenuePath = "(//oj-table[@id='tableFinSmryDivi']//tr/td/div[@class='rowDataCell standardData ellipsis'])[1]";
@@ -328,12 +317,12 @@ public interface DealManagementPageElements
 	String Deal_Click_On_Account1_Action_Icon = "(//*[@class=\'oj-button-label\']/span[@slot=\'endIcon\'])[2]";
 	String Deal_Select_Prize_Item_group_OnCustomer_Pencil_Icon = "Select Price Item Group Selection";
 	String Select_Prize_Item_group_PrizeItem_CheckBox_Selection = "(//*[./div/span/a[text()='ReplacePriceItemName']]//span[@class='demo-treeview-checkbox oj-fwk-icon-checkbox-tristate-unselected'])";
-	String Deal_PriceItem_Select_On_Pricing_And_Commitments_Screen = "(//div[@class='pihHyperlink' and @title='ReplacePriceItem'])";
+	String Deal_PriceItem_Select_On_Pricing_And_Commitments_Screen = "(//div[@class=\"pihHyperlink\" and @title=\"ReplacePriceItem\"])";
 	String Deal_PriceItem_Variable_ErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen = "//*[@id='ERRMSG-TEXT-SPAN']/a[@ojmenu=\'opt\']";
 	String Deal_PriceItem_Close_ErrorMSG_On_Pricing_And_Commitments_Screen = "//*[@alt='Close']";
-	String Deal_PriceItem_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen = "(//*[.//text()='ReplacePriceItem']/ancestor::tr//td/div[@class='rowDataCell proposedData leftAlign']//input)[1]";
+	String Deal_PriceItem_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen = "(//*[.//text()='ReplacePriceItem']/ancestor::tr//td/div[@class=\"rowDataCell proposedData leftAlign\"]//input)[1]";
 	String Deal_PriceItem_with_Parameter_Rate_HyperLink_Navidation_To_Orininal_Pricing_And_Commitments_Screen4 = "(//*[.//div[text()='ReplacePriceItem'] and .//div[text()='ReplaceParameter']]/td/div[@data-bind='attr:{title:($context.$context?.row.attr.proposedPriceAsgnDescr || $context.row.attr.proposedPriceAsgnDescr)}']//span)[1]";
-	String Deal_PriceItem_HyperLink_To_Navigate_Orininal_Pricing_And_Commitments_Screen1 = "(//div[@class='pihHyperlink' and @title='ReplacePriceItem']/ancestor::tr//td/div[@data-bind='attr:{title:($context.$context?.row.attr.proposedPriceAsgnDescr || $context.row.attr.proposedPriceAsgnDescr)}']//span)[1]";
+	String Deal_PriceItem_HyperLink_To_Navigate_Orininal_Pricing_And_Commitments_Screen1 = "(//div[@class=\"pihHyperlink\" and @title=\"ReplacePriceItem\"]/ancestor::tr//td/div[@data-bind=\"attr:{title:($context.$context?.row.attr.proposedPriceAsgnDescr || $context.row.attr.proposedPriceAsgnDescr)}\"]//span)[1]";
 	String Deal_Pricing_screen_Display_Sequense = "(//*[@id='priceCompSequenceNo_0'])[1]";
 	String Deal_PriceItem_Not_Editable_FixedErrorMSG_On_Orininal_And_Proposed_Pricing_And_Commitments_Screen = "//div[@id='pricing']/div[@id='nonNegotiableDiv']";
 	String Deal_PriceItem_Recommended_Rate_Input_TextBox_On_Pricing_And_Commitments_Screen = "(//*[.//text()='ReplacePriceItem']/ancestor::tr//span[text()='Recommend'])";
@@ -342,8 +331,8 @@ public interface DealManagementPageElements
 	String Deal_Pricing_Recommend_Price_item_link = "//span[text()='Recommend']";
 	String Deal_Pricing_And_Commitment_Table_Heading_Text = "//*[@title='Price Item Hierarchy']";
 	String Deal_Person_Hierarchy_Switch_Toggle = "//*[@id='switch']//div[@role='switch']";
-//	String Deal_Information_PersonalHierarchyOriginalRevenueValue_Label_Division_view = "(//*[@class='localData oj-table-data-cell oj-form-control-inherit']/span)[3]";
-//	String Deal_Information_PersonalHierarchyOriginalCostValue_Label_Division_view = "(//*[@class='localData oj-table-data-cell oj-form-control-inherit']/span)[4]";
+//	String Deal_Information_PersonalHierarchyOriginalRevenueValue_Label_Division_view = "(//*[@class=\"localData oj-table-data-cell oj-form-control-inherit\"]/span)[3]";
+//	String Deal_Information_PersonalHierarchyOriginalCostValue_Label_Division_view = "(//*[@class=\"localData oj-table-data-cell oj-form-control-inherit\"]/span)[4]";
 //	String Deal_Information_PersonalHierarchyProjectedRevenueValue_Label_Division_view = "(//*[@class='localData oj-table-data-cell oj-form-control-inherit']/span)[1]";
 //	String Deal_Information_PersonalHierarchyProjectedCostValue_Label_Division_view = "(//*[@class='localData oj-table-data-cell oj-form-control-inherit']/span)[2]";
 	String Deal_Information_PersonalHierarchyOriginalRevenueValueForAccounts_Label_Division_view ="(//*[.//text()='ReplaceAccountName']/ancestor::tr/td//div[@class='rowDataCell originalData ellipsis'])[1]";
@@ -378,57 +367,57 @@ public interface DealManagementPageElements
 	String Product_Enrollment_sProposedProductServiceEndDate = "//*[@id='endDate_0_0']";
 	String Product_Enrollment_sProposedProductServiceInclusion = "//*[@id='isIncluded_0_0']";
 //	String Deal_Information_Pricing_and_Commitments_Navigate_To_Pricing_For_Single_Price_Item = "//tr[.//td//a[text()='ReplacePriceItem']]/td/span[@data-bind=' event: {click: getPricingForSinglePrice}']";
-	String GoToPersonFromCustomer360View = "//*[@title='Go To Person ']";
-	String GotoAccount1FromCurrentContext = "//*[@id='oraTableContextContainer']/tbody/tr[2]/td[2]/a";
-	String PersonHierarchyApproveStatus = "//*[@id='ojetTable:_hdrCol0_48_3']/img";
+	String GoToPersonFromCustomer360View = "//*[@title=\"Go To Person \"]";
+	String GotoAccount1FromCurrentContext = "//*[@id=\"oraTableContextContainer\"]/tbody/tr[2]/td[2]/a";
+	String PersonHierarchyApproveStatus = "//*[@id=\"ojetTable:_hdrCol0_48_3\"]/img";
 	String SimulationDetailsApproveStatusIcon = "/html/body/div[4]/span[11]/img";
-	String ProfitVariationPath = "//*[@id='overallDealProfitabiltyDeviationID_1']";
+	String ProfitVariationPath = "//*[@id=\"overallDealProfitabiltyDeviationID_1\"]";
 	String DivisionLevelOriginalProfit = "//*[@id='id1_1']/tr/td[13]";
 	String RecommendedRevenue = "(//oj-table[@id='tableFinSmry']//td/div[@class='rowDataCell recommendedData ellipsis'])[1]";
 	String RecommendedProfitAmount = "(//oj-table[@id='tableFinSmry']//td/div[@class='rowDataCell recommendedData ellipsis'])[3]";
 	String RecommendedProfitability = "(//oj-table[@id='tableFinSmry']//td/div[@class='rowDataCell recommendedData ellipsis'])[4]";
-	String SearchContractIdOnBillableCharge = "//*[@id='SA_ID']";
-	String BillableChargeStartDate = "//*[@id='START_DT']";
-	String BillableChargeEndDate = "//*[@id='END_DT']";
-	String NavigateToSQDetailsTabInBillableCharge = "//*[@title='SQ Details']";
-	String BillableChargeServiceQtyIdentifier = "//*[@id='BCHG_SQ:0$SQI_CD']";
-	String BillableChargeServiceQty = "//*[@id='BCHG_SQ:0$SVC_QTY']";
-	String NavigateToPricingInfoTabInBillableCharge = "//*[@id='PRICING_INFO_LBL']/table/tbody/tr[2]/td";
-	String BillableChargePriceItem = "//*[@id='PRICEITEM_CD']";
-	String BillableChargePriceItemParameter1 = "//*[@id='PPC_LINE:0$PRICEITEM_PARM_CD']";
-	String BillableChargePriceItemParameterValue1 = "//*[@id='PPC_LINE:0$PRICEITEM_PARM_VAL']";
-	String BillableChargeAddPriceItemParameter = "//*[@id='IM_PPC_LINE:0$Grid_addButton']";
-	String BillableChargePriceItemParameter2 = "//*[@id='PPC_LINE:1$PRICEITEM_PARM_CD']";
-	String BillableChargePriceItemParameterValue2 = "//*[@id='PPC_LINE:1$PRICEITEM_PARM_VAL']";
-	String BillableChargeSaveButton = "//*[@id='IM_SAVE']";
-	String BillableChargeId = "//*[@id='BILLABLE_CHG_ID']";
-	String DivisionLevelProjectedProfitabilityAmt = "(//*[@orafield='proposedProfitabilityAmt'])[2]";
-	String OverrideOriginalPricing = "(//*[@type='button' and @value='Save' and @style='display: inline;'])[1]";
+	String SearchContractIdOnBillableCharge = "//*[@id=\"SA_ID\"]";
+	String BillableChargeStartDate = "//*[@id=\"START_DT\"]";
+	String BillableChargeEndDate = "//*[@id=\"END_DT\"]";
+	String NavigateToSQDetailsTabInBillableCharge = "//*[@title=\"SQ Details\"]";
+	String BillableChargeServiceQtyIdentifier = "//*[@id=\"BCHG_SQ:0$SQI_CD\"]";
+	String BillableChargeServiceQty = "//*[@id=\"BCHG_SQ:0$SVC_QTY\"]";
+	String NavigateToPricingInfoTabInBillableCharge = "//*[@id=\"PRICING_INFO_LBL\"]/table/tbody/tr[2]/td";
+	String BillableChargePriceItem = "//*[@id=\"PRICEITEM_CD\"]";
+	String BillableChargePriceItemParameter1 = "//*[@id=\"PPC_LINE:0$PRICEITEM_PARM_CD\"]";
+	String BillableChargePriceItemParameterValue1 = "//*[@id=\"PPC_LINE:0$PRICEITEM_PARM_VAL\"]";
+	String BillableChargeAddPriceItemParameter = "//*[@id=\"IM_PPC_LINE:0$Grid_addButton\"]";
+	String BillableChargePriceItemParameter2 = "//*[@id=\"PPC_LINE:1$PRICEITEM_PARM_CD\"]";
+	String BillableChargePriceItemParameterValue2 = "//*[@id=\"PPC_LINE:1$PRICEITEM_PARM_VAL\"]";
+	String BillableChargeSaveButton = "//*[@id=\"IM_SAVE\"]";
+	String BillableChargeId = "//*[@id=\"BILLABLE_CHG_ID\"]";
+	String DivisionLevelProjectedProfitabilityAmt = "(//*[@orafield=\"proposedProfitabilityAmt\"])[2]";
+	String OverrideOriginalPricing = "(//*[@type=\"button\" and @value=\"Save\" and @style=\"display: inline;\"])[1]";
 	String Deal_Information_ViewAndEditPricing_PencilIcon_Of_Specific_Account = "(//tbody/tr[.//text()='ReplacePersonAccountName']//button/div/span)[2]";
 	String Deal_Pricing_And_Commitment_Information_For_Specific_Price_Item = "(//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameter']])[1]";
 	
-	String Deal_Pricing_And_Commitment_Parameter = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.priceItemParmCode || $context.row.attr.priceItemParmCode}']";
-	String Deal_Pricing_And_Commitment_StartDate = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.startDate || $context.row.attr.startDate}']";
-	String Deal_Pricing_And_Commitment_EndDate = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.endDate || $context.row.attr.endDate}']";
-	String Deal_Pricing_And_Commitment_AveragePrice = "//tbody/tr/td[.//text()='ReplacePriceItemName'and following-sibling::td//div[.//text()='ReplacePriceItemParameterName'] ]/following-sibling::td/div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedAveragePrice || $context.row.attr.proposedAveragePrice) : ($context.$context?.row.attr.localProposedAveragePrice || $context.row.attr.localProposedAveragePrice)}']";
-	String Deal_Pricing_And_Commitment_Cost = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}']";
-	String Deal_Pricing_And_Commitment_AssignmentLevel = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.proposedPriceAssignLevel || $context.row.attr.proposedPriceAssignLevel}']";
-	String Deal_Pricing_And_Commitment_PriceList = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.proposedPriceListInfo ||  $context.row.attr.proposedPriceListInfo}']";
-	String Deal_Pricing_And_Commitment_Profit = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedProfit || $context.row.attr.proposedProfit):($context.$context?.row.attr.localProposedProfit || $context.row.attr.localProposedProfit)}']";
-//	String Deal_Pricing_And_Commitment_PricingInformation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}']";
-	String Deal_Pricing_And_Commitment_Profitability = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.proposedProfitabilityPcent || $context.row.attr.proposedProfitabilityPcent}']";
-	String Deal_Pricing_And_Commitment_ProfitVariation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.profitVarVsAct || $context.row.attr.profitVarVsAct}']";
-	String Deal_Pricing_And_Commitment_Revenue = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}']";
-	String Deal_Pricing_And_Commitment_Volume = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//input[@data-bind='textInput: $context.$context?.row.attr.serviceQtyString || $context.row.attr.serviceQtyString, event: {blur: setVolume}, attr:{pid: $context.$context?.row.attr.id || $context.row.attr.id}']";
-	String Deal_Pricing_And_Commitment_RevenueVariation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.revenueVarVsAct || $context.row.attr.revenueVarVsAct}']";
-	String Deal_Pricing_And_Commitment_Approver = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.c1CurrApprover || $context.row.attr.c1CurrApprover}']";
-	String Deal_Pricing_And_Commitment_Status = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//img[@data-bind='attr: { 'src': getStatusSrc(($context.$context?.row.attr.prodMngrtPriceItemApprFlag || $context.row.attr.prodMngrtPriceItemApprFlag === 'Y'), $context.$context?.row.attr.statusCd || $context.row.attr.statusCd), 'alt':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd, 'title':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd}']";
+	String Deal_Pricing_And_Commitment_Parameter = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.priceItemParmCode || $context.row.attr.priceItemParmCode}\"]";
+	String Deal_Pricing_And_Commitment_StartDate = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.startDate || $context.row.attr.startDate}\"]";
+	String Deal_Pricing_And_Commitment_EndDate = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.endDate || $context.row.attr.endDate}\"]";
+	String Deal_Pricing_And_Commitment_AveragePrice = "//tbody/tr/td[.//text()='ReplacePriceItemName'and following-sibling::td//div[.//text()='ReplacePriceItemParameterName'] ]/following-sibling::td/div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedAveragePrice || $context.row.attr.proposedAveragePrice) : ($context.$context?.row.attr.localProposedAveragePrice || $context.row.attr.localProposedAveragePrice)}\"]";
+	String Deal_Pricing_And_Commitment_Cost = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"]";
+	String Deal_Pricing_And_Commitment_AssignmentLevel = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.proposedPriceAssignLevel || $context.row.attr.proposedPriceAssignLevel}\"]";
+	String Deal_Pricing_And_Commitment_PriceList = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.proposedPriceListInfo ||  $context.row.attr.proposedPriceListInfo}\"]";
+	String Deal_Pricing_And_Commitment_Profit = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedProfit || $context.row.attr.proposedProfit):($context.$context?.row.attr.localProposedProfit || $context.row.attr.localProposedProfit)}\"]";
+//	String Deal_Pricing_And_Commitment_PricingInformation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedCostValue || $context.row.attr.proposedCostValue) : ($context.$context?.row.attr.localProposedCostValue || $context.row.attr.localProposedCostValue)}\"]";
+	String Deal_Pricing_And_Commitment_Profitability = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.proposedProfitabilityPcent || $context.row.attr.proposedProfitabilityPcent}\"]";
+	String Deal_Pricing_And_Commitment_ProfitVariation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.profitVarVsAct || $context.row.attr.profitVarVsAct}\"]";
+	String Deal_Pricing_And_Commitment_Revenue = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.proposedRevenue || $context.row.attr.proposedRevenue) : ($context.$context?.row.attr.localProposedRevenue || $context.row.attr.localProposedRevenue)}\"]";
+	String Deal_Pricing_And_Commitment_Volume = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//input[@data-bind=\"textInput: $context.$context?.row.attr.serviceQtyString || $context.row.attr.serviceQtyString, event: {blur: setVolume}, attr:{pid: $context.$context?.row.attr.id || $context.row.attr.id}\"]";
+	String Deal_Pricing_And_Commitment_RevenueVariation = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.revenueVarVsAct || $context.row.attr.revenueVarVsAct}\"]";
+	String Deal_Pricing_And_Commitment_Approver = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.c1CurrApprover || $context.row.attr.c1CurrApprover}\"]";
+	String Deal_Pricing_And_Commitment_Status = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//img[@data-bind=\"attr: { 'src': getStatusSrc(($context.$context?.row.attr.prodMngrtPriceItemApprFlag || $context.row.attr.prodMngrtPriceItemApprFlag === 'Y'), $context.$context?.row.attr.statusCd || $context.row.attr.statusCd), 'alt':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd, 'title':$context.$context?.row.attr.statusCd || $context.row.attr.statusCd}\"]";
 
-	String Deal_Pricing_And_Commitment_Original_AveragePrice = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.avgPrice || $context.row.attr.avgPrice) : ($context.$context?.row.attr.localAvgPrice || $context.row.attr.localAvgPrice)}']";
-	String Deal_Pricing_And_Commitment_Original_Revenue = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.revenue || $context.row.attr.revenue) : ($context.$context?.row.attr.localRevenue || $context.row.attr.localRevenue)}']";
-	String Deal_Pricing_And_Commitment_Original_Cost = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.cost || $context.row.attr.cost) : ($context.$context?.row.attr.localCost || $context.row.attr.localCost)}']";
-	String Deal_Pricing_And_Commitment_Original_PriceList = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.priceListInfo || $context.row.attr.priceListInfo}']";
-	String Deal_Pricing_And_Commitment_Original_AssignmentLevel = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=''attr':{'title':$context.$context?.row.attr.lvlLbl || $context.row.attr.lvlLbl}']";
+	String Deal_Pricing_And_Commitment_Original_AveragePrice = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.avgPrice || $context.row.attr.avgPrice) : ($context.$context?.row.attr.localAvgPrice || $context.row.attr.localAvgPrice)}\"]";
+	String Deal_Pricing_And_Commitment_Original_Revenue = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.revenue || $context.row.attr.revenue) : ($context.$context?.row.attr.localRevenue || $context.row.attr.localRevenue)}\"]";
+	String Deal_Pricing_And_Commitment_Original_Cost = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$parent.isLocalData() == 'DEAL' ? ($context.$context?.row.attr.cost || $context.row.attr.cost) : ($context.$context?.row.attr.localCost || $context.row.attr.localCost)}\"]";
+	String Deal_Pricing_And_Commitment_Original_PriceList = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.priceListInfo || $context.row.attr.priceListInfo}\"]";
+	String Deal_Pricing_And_Commitment_Original_AssignmentLevel = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.lvlLbl || $context.row.attr.lvlLbl}\"]";
 	
 	String Deal_Information_Screen_CompareType_Path = "(//oj-select-single[@id='compareType']//span/a)[1]";
 	String Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath = "//oj-highlight-text/span[text()='Proposed and Original']";
@@ -463,7 +452,7 @@ public interface DealManagementPageElements
 	String Deal_Standard_Profit = "(//oj-table[@id='tableFinSmry']//td[3]/div)[3]";
 	String Deal_Standard_Profitability = "(//oj-table[@id='tableFinSmry']//td[4]/div)[3]";
 	
-	String Deal_Dashboard_Search_Deal_Lower_Button ="(//*[@value='Search'])[2]";
+	String Deal_Dashboard_Search_Deal_Lower_Button ="(//*[@value=\"Search\"])[2]";
 	String search_Algorithm_TextBox = "//*[@orafield='alg']";
 	String Search_Algorithm_Code = "//*[@value='Search']";
 	String Algorithm_Description_Navigation_link = "//*[@title='Go To Algorithm ']";
@@ -476,23 +465,20 @@ public interface DealManagementPageElements
 	String AdminMenuAlgorithmSearchOption = "//*[@data-menuobj='CI_ADMINMENU']/span[text()='Search']";
 	
 	String ProductSectionExpandButton = "//*[@oramdlabel='DEALINFO_TLBL' and @onclick='oraExpandCollapseSection(this);renderProdDivTable(this);']";
-	String ProductNamePath = "//div[text()='ReplaceProductName']/ancestor::tr/td[1]/div"; 
-	String ProductDivisionNamePath = "//div[text()='ReplaceProductName']/ancestor::tr/td[2]/div";
+	String ProductNamePath = "//div[text()=\"ReplaceProductName\"]/ancestor::tr/td[1]/div"; 
+	String ProductDivisionNamePath = "//div[text()=\"ReplaceProductName\"]/ancestor::tr/td[2]/div";
 	String ProductProposedRevenuePath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[1]";
 	String ProductProposedCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[2]";
 	String ProductProposedProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[3]";
 	String ProductProposedProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell proposedData ellipsis')])[4]";
-
 	String ProductOriginalRevenuePath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[1]";
 	String ProductOriginalCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[2]";
 	String ProductOriginalProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[3]";
 	String ProductOriginalProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell originalData ellipsis')])[4]";
-
 	String ProductStandardRevenuePath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[1]";
 	String ProductStandardCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[2]";
 	String ProductStandardProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[3]";
 	String ProductStandardProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[4]";
-
 	
 	
 	
