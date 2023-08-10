@@ -6634,7 +6634,7 @@ public class DealManagementPageEvents {
 			sDivisionOriginalProfit = CF.FnGetCellValue(iStartingRow, 18, sSheetName, sWorkbook).toString().trim();
 			sDivisionOriginalProfitability = CF.FnGetCellValue(iStartingRow, 19, sSheetName, sWorkbook).toString().trim();
 
-			sProfitVariation = CF.FnGetCellValue(iStartingRow, 20, sSheetName, sWorkbook).toString().trim();
+//			sProfitVariation = CF.FnGetCellValue(iStartingRow, 20, sSheetName, sWorkbook).toString().trim();
 			sRevenueVariation = CF.FnGetCellValue(iStartingRow, 20, sSheetName, sWorkbook).toString().trim();
 
 			sDivisionStandardRevenue = CF.FnGetCellValue(iStartingRow, 45, sSheetName, sWorkbook).toString().trim();
@@ -10119,6 +10119,16 @@ public class DealManagementPageEvents {
 				String GetResponse = FnReadPricingAndCommitmentIWS(sReadPricing, sDealPricingAndCommitmentResource, sContentTypeHeader, sAcceptTypeHeader, sActionFlag, sInquiryModeFlag, sDealId, sModelId, sDealidentifier, sEntityType, sEntityId, spricingDetails, scommitmentDetails, sErrorMessageFlag);
 
 								System.out.println("GetResponse 1 :-> " + GetResponse);
+								
+								try {
+							        FileWriter myWriter = new FileWriter("./databank/banking/deal_management/"+BaseTest.sScriptName+"_ReadResponse.txt");
+							        myWriter.write(GetResponse);
+							        myWriter.close();
+							        System.out.println("Successfully wrote Read Response to the file.");
+							      } catch (IOException e) {
+							        System.out.println("An error occurred.");
+							        e.printStackTrace();
+							      }				
 
 				if (actionFlag.contains("Seasonal")) {
 					sSQI_TYPE_FLG = actionFlag = "OVRD";
@@ -10202,7 +10212,7 @@ public class DealManagementPageEvents {
 
 						System.out.println("result:-" + result);
 
-						if (pricingStatus.equals("RECM") && (sSQI_TYPE_FLG.equals("OVRD") || sSQI_TYPE_FLG.equals("UPD"))) {
+						if (pricingStatus.equals("RECM") && (sSQI_TYPE_FLG.equals("OVRD") || sSQI_TYPE_FLG.equals("UPD") || sSQI_TYPE_FLG.equals("RECM"))) {  //-- && (sSQI_TYPE_FLG.equals("OVRD") || sSQI_TYPE_FLG.equals("UPD"))
 							PricingDetailsJsonArray.remove(i);
 						} else if (pricingStatus.equals("ACTV")) {
 							PricingDetailsJsonArray.remove(i);
@@ -10486,6 +10496,15 @@ public class DealManagementPageEvents {
 
 					System.out.println("Final Override Pricing Response 1 :-" + OverridePricingResponse);
 
+					try {
+				        FileWriter myWriter = new FileWriter("./databank/banking/deal_management/"+BaseTest.sScriptName+"_OVRDOrUPDPricingResponse.txt");
+				        myWriter.write(OverridePricingResponse);
+				        myWriter.close();
+				        System.out.println("Successfully wrote to theOverridePricingResponse file.");
+				      } catch (IOException e) {
+				        System.out.println("An error occurred.");
+				        e.printStackTrace();
+				      }
 
 					CF.FnWriteCellValue(iStartingRow, 47, OverridePricing, sSheetName, sWorkbook);
 					CF.FnWriteCellValue(iStartingRow, 48, OverridePricingResponse, sSheetName, sWorkbook);
@@ -11239,24 +11258,58 @@ public class DealManagementPageEvents {
 		try {
 
 
-
 			Thread.sleep(5000);
 			CF.FnSetFrame(driver, "uiMap");
 			CF.FnWaitForElement(driver, 360, DealManagementPageElements.Pricing_And_Commitments_Title_HeadingText);
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 
 			int isCompareTypeSelected = CF.getListWebElements(driver, "XPATH", DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath).size();
 			if(isCompareTypeSelected == 0) {
-			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareType_Path);
-			Thread.sleep(2000);
-			CF.FnGetWebElement(driver, "ID", "compareType").click();
-			Thread.sleep(3000);
-			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath);
-			Thread.sleep(3000);
-			}
 			
-			CF.FnElementClick(driver, DealManagementPageElements.Pricing_And_Commitments_ExpandAll_Button);
-			Thread.sleep(5000);
+			int recordFound = 	CF.getListWebElements(driver, "XPATH", "//oj-select-single[@id='compareType']").size();
+			System.out.println("recordFound-"+recordFound);
+			for (WebElement singleRate: CF.getListWebElements(driver, "XPATH", "//oj-select-single[@id='compareType']")) {
+				if(singleRate.isDisplayed()) {
+					singleRate.click();
+					Thread.sleep(2000);
+//					CF.FnGetWebElement(driver, "ID", "compareType").click();
+					Thread.sleep(3000);
+					CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath);
+					Thread.sleep(3000);
+					CF.FnElementClick(driver, DealManagementPageElements.Pricing_And_Commitments_ExpandAll_Button);
+					Thread.sleep(5000);
+
+					}
+					
+
+				}
+			}
+
+
+
+//			int isCompareTypeSelected = CF.getListWebElements(driver, "XPATH", DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath).size();
+//			if(isCompareTypeSelected == 0) {
+//			WebElement scroll1 = CF.FnGetWebElement(driver, "ID", "compareType");
+//			CF.FnScrollToElement(driver, scroll1);
+//			Thread.sleep(200);
+//			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareType_Path);
+//			Thread.sleep(3000);
+//			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath);
+//			Thread.sleep(3000);
+//			}
+			
+//			int isCompareTypeSelected = CF.getListWebElements(driver, "XPATH", DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath).size();
+//			if(isCompareTypeSelected == 0) {
+//			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareType_Path);
+////			Thread.sleep(2000);
+////			CF.FnGetWebElement(driver, "ID", "compareType").click();
+//			Thread.sleep(3000);
+//			CF.FnElementClick(driver, DealManagementPageElements.Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath);
+//			Thread.sleep(3000);
+//			}
+//			CF.FnElementClick(driver, DealManagementPageElements.Pricing_And_Commitments_ExpandAll_Button);
+//			Thread.sleep(5000);
+
 
 
 			String PriceItemPath = DealManagementPageElements.Deal_Pricing_And_Commitment_Information_For_Specific_Price_Item;
@@ -11553,13 +11606,16 @@ public class DealManagementPageEvents {
 				CF.FnSetFrame(driver, "uiMap");
 				Thread.sleep(4000);
 				
+				WebElement scroll = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Algorithm_Save_Button);
+				CF.FnScrollToElement(driver, scroll);
+				Thread.sleep(5000);
+				
 				String ParameterPath = DealManagementPageElements.Algorithm_Parameter_Value_Field.replaceAll("ReplaceParameter", sParameter);
 				System.out.println("ParameterPath:-" + ParameterPath);
 				CF.FnSetText(driver, ParameterPath, sParameterValues);
 
-				WebElement scroll = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Algorithm_Save_Button);
-				CF.FnScrollToElement(driver, scroll);
-				Thread.sleep(5000);
+				Thread.sleep(2000);
+
 				CF.FnElementClick(driver, DealManagementPageElements.Algorithm_Save_Button);
 				Thread.sleep(5000);
 

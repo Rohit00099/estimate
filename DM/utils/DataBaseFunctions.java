@@ -23171,11 +23171,16 @@ public class DataBaseFunctions
     	{
     		if (BaseTest.eFlgFound.equalsIgnoreCase("true"))
     		{
-			String sBillableChargeStartDate = CF.FnGetCellValue(iStartingRow, 10, sSheetName, sWorkbook).toString().trim();
-			String sBillableChargeEndDate = CF.FnGetCellValue(iStartingRow, 11, sSheetName, sWorkbook).toString().trim();
-			String sBillableChargeId = CF.FnGetCellValue(iStartingRow, 14, sSheetName, sWorkbook).toString().trim();
-			
-			FnUpdateValueInDb("Update CI_BILL_CHG SET START_DT = '"+sBillableChargeStartDate+"', END_DT = '"+sBillableChargeEndDate+"' WHERE BILLABLE_CHG_ID = '"+sBillableChargeId+"'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
+    			String sBillableChargeStartDate = CF.FnGetCellValue(iStartingRow, 10, sSheetName, sWorkbook).toString().trim();
+    			String sBillableChargeEndDate = CF.FnGetCellValue(iStartingRow, 11, sSheetName, sWorkbook).toString().trim();
+    			String sContractId = CF.FnGetCellValue(iStartingRow, 4, sSheetName, sWorkbook).toString().trim();
+    			String sPriceItem = CF.FnGetCellValue(iStartingRow, 5, sSheetName, sWorkbook).toString().trim();
+    			String sServiceQty = CF.FnGetCellValue(iStartingRow, 13, sSheetName, sWorkbook).toString().trim();
+    			//String sBillableChargeId = CF.FnGetCellValue(iStartingRow, 14, sSheetName, sWorkbook).toString().trim();
+
+    			
+    			//FnUpdateValueInDb("Update CI_BILL_CHG SET START_DT = '"+sBillableChargeStartDate+"', END_DT = '"+sBillableChargeEndDate+"' WHERE BILLABLE_CHG_ID = '"+sBillableChargeId+"'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA refer this query by proving billable charge id
+    			FnUpdateValueInDb("Update CI_BILL_CHG SET START_DT = '"+sBillableChargeStartDate+"', END_DT = '"+sBillableChargeEndDate+"' WHERE BILLABLE_CHG_ID = (SELECT CI_BILL_CHG.BILLABLE_CHG_ID FROM CI_BILL_CHG FULL JOIN CI_BCHG_SQ ON CI_BILL_CHG.BILLABLE_CHG_ID = CI_BCHG_SQ.BILLABLE_CHG_ID WHERE SA_ID = '"+sContractId+"' and PRICEITEM_CD = '"+sPriceItem+"' and SVC_QTY = '"+sServiceQty+"')","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA refer this query by proving billable charge id
 
     		//CF.FnTestCaseStatusReport("Pass", "Billable Charge Date Updated Successfully in Database table");    	
 

@@ -2078,11 +2078,11 @@ public class deal_mangement extends BaseTest {
                 }
                 
                 //Added on QADATA
-                //DB.FnUpdateBillableChargeDates(70, sSheetName, sWorkbook);
-                //DB.FnUpdateBillableChargeDates(71, sSheetName, sWorkbook);
-                //DB.FnUpdateBillableChargeDates(72, sSheetName, sWorkbook);
-                //DB.FnUpdateBillableChargeDates(73, sSheetName, sWorkbook);
-                //DB.FnUpdateBillableChargeDates(74, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(70, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(71, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(72, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(73, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(74, sSheetName, sWorkbook);
 
                 dealManagementPageEvents.FnAddBillableCharge(128, sSheetName, sWorkbook);
                 dealManagementPageEvents.FnAddBillableCharge(129, sSheetName, sWorkbook);
@@ -2249,7 +2249,7 @@ public class deal_mangement extends BaseTest {
 
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/BANK_82_6_Test_43707.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/BANK_82_6_Test_43707_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
                 // To Change user for sending new request
@@ -3110,7 +3110,7 @@ public class deal_mangement extends BaseTest {
 
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/BANK_82_6_Test_43805.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/BANK_82_6_Test_43805_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
 
@@ -3125,7 +3125,7 @@ public class deal_mangement extends BaseTest {
                 String sDateName = CommonFunctions.FnGetUniqueId();
                 String sDealIdentifier = "BANK_82_6_Test_43805";
                 sDealIdentifier = sDealIdentifier + "_" + sDateName;
-
+ 
 
                 String sDealId, smodelId;
 
@@ -3293,7 +3293,7 @@ public class deal_mangement extends BaseTest {
                 //################ Return Deal To Submitter IWS ####################//
                 String ReturnDealtoSubmitter = "{\"C1-DealREST\":{\"actionFlag\":\"UPD\",\"dealOperation\":{\"operationFlag\":\"RETN\",\"dealId\":\"" + sDealId + "\",\"division\":\"IND\",\"comments\":\"Recommended Price Item\",\"rejectReasonCode\":\"RETURN\"}}}";
                 DM.FnReturnDealToSubmitterUsingIWS(sCreateDealResource, ReturnDealtoSubmitter, sContentTypeHeader, sAcceptTypeHeader);
-
+                
                 //Login Change
                 WF.FnUserChange("RMBK1");
 
@@ -3480,7 +3480,7 @@ public class deal_mangement extends BaseTest {
                 AF.FnNavigation(getDriver(), "Deal Dashboard");
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/BANK_82_Test_43810.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/BANK_82_Test_43810_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
                 // To Change user for sending new request
@@ -3573,7 +3573,7 @@ public class deal_mangement extends BaseTest {
 
                 //Refresh Deal Information Screen
                 dealManagementPageEvents.FnRefreshDeal(getDriver());
-
+                
                 //Function To verify Deal Currency Personal Hierarchy Information On Deal Information
                 dealManagementPageEvents.FnVerifyPersonalHierarchyInformationOnDealInformation(191, sSheetName, sWorkbook);
 
@@ -3710,7 +3710,7 @@ public class deal_mangement extends BaseTest {
 
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/BANK_82_Test_43811.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/BANK_82_Test_43811_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
                 // To Change user for sending new request
@@ -3803,8 +3803,8 @@ public class deal_mangement extends BaseTest {
                 AF.FnNavigation(getDriver(), "Deal Dashboard"); //for Test
 
                 //Function to search Deal and nivate to deal information screen
-                dealManagementPageEvents.FnSearchDealIdAssignedToMyRole(sDealId, false, false, true, "RMBK1");
-
+                dealManagementPageEvents.FnSearchDealIdAssignedToMyRole(sDealId, false, false, true, "RMBK1"); 
+                
                 //Function To verify Deal Currency Personal Hierarchy Information On Deal Information
                 dealManagementPageEvents.FnVerifyPersonalHierarchyInformationOnDealInformation(191, sSheetName, sWorkbook);
 
@@ -4727,12 +4727,13 @@ public class deal_mangement extends BaseTest {
                 AF.FnLoginChange(getDriver(), "RMBK1");
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/DealManagement_Test_39767.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/DealManagement_Test_39767_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
                 //Function to update "Stacking Required" Option as Y
                 dealManagementPageEvents.FnUpdateAlgorithmValue(163, sSheetName, sWorkbook);
                 dealManagementPageEvents.FnUpdateAlgorithmValue(164, sSheetName, sWorkbook);
+
 
                 String sDateName = CommonFunctions.FnGetUniqueId();
                 String sDealIdentifier1 = CF.FnGetCellValue(90, 3, sSheetName, sWorkbook).toString().trim();
@@ -5502,7 +5503,6 @@ public class deal_mangement extends BaseTest {
                 //This function to verify Deal Financial Summary Details from DB Table
                 DB.Deal_Financial_Summary(107, sSheetName, sWorkbook, smodelId);
 
-
                 AF.FnNavigation(getDriver(), "Deal Dashboard");
 
                 //Function To Navigate to Deal Information Page
@@ -5561,7 +5561,7 @@ public class deal_mangement extends BaseTest {
 
                 //Function To verify Deal Financial Summary Information On Deal Information
                 dealManagementPageEvents.FnVerifyDealFinancialSummary(150, sSheetName, sWorkbook);
-
+                
                 //Function To Navigate to Pricing And Commitment Screen
                 dealManagementPageEvents.FnNavigateToAccountViewAndEditPricing("External Account Identifier - EAI_STACKING_COMT_PARENT_ACC1");
 

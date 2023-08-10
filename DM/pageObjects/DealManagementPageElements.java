@@ -59,7 +59,7 @@ public interface DealManagementPageElements
 	String Deal_Information_ViewAndAssignProposedPriceList_PencilIcon ="View and Assign Proposed PriceList";
 	String Deal_Information_ExpandAll_Button ="//*[@id='expandAll']";
 	String Deal_Price_Item_Group_Selection_ExpandAll_Button ="//*[@id='expandAll']";
-	String Deal_Information_PersonalHierarchyPersonName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td/div[@class=\"personDataCell\"]/span)[1]";
+	String Deal_Information_PersonalHierarchyPersonName_Label ="(//tr/td/div[@class=\"personDataCell\"]/span)[1]";
 	String Deal_Information_PersonalHierarchyDivisionName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td[3]/div)";
 	String Deal_Information_PersonalHierarchyRevenueVariationValue_Label ="(//*[@class='oj-fwk-icon oj-fwk-icon-arrow-n oj-menu-item-end-icon upiconSld']/following-sibling::span)";
 	String Deal_Information_PersonalHierarchyProjectedRevenueValue_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td//div[@class='rowDataCell proposedData ellipsis'])[1]";
@@ -273,8 +273,19 @@ public interface DealManagementPageElements
 	String Deal_Approval_Workflow_ToDoRoleValue_Label ="(//*[@orafield='toDoRole'])";
 	String Deal_Approval_Workflow_ToDoRoleActionTakenValue_Label ="(//*[@orafield='dealApprStatus'])";
 	String Deal_Approval_Workflow_Approval_History_Table = "(//*[@id='dealWorkflowTabular']//tbody)";
+	String sSequenceApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'sequence\'])";
+	String sProcessApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'workflowLbl\'])";
+	String sApprovalTypeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//th[@orafield=\'profileType\'])";
+	String sDivisionApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'division\'])";
+	String sProductApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'product\'])";
+	String sApprovalLevelApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'dealLevel\'])";
+	String sToDoRoleApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'toDoRole\'])";
+	String sUserNameApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'approverUserId\'])";
+	String sActionTakenApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'dealApprStatus\'])";
+	String sCreateDateTimeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'creationDateTime\'])";
+	String sUpdateDateTimeApprovalHistoryPath = "(//*[@id=\'dealWorkflowTabular\']//tbody//td[@orafield=\'updateDateTime\'])";
 	String Deal_Information_Customer_Status_On_Personalhierarchy = "(//*[.//text()='ReplacePersonName']/ancestor::tr/td[2]/div/img)[1]";
-	String Deal_Information_Customer_Status_On_Personalhierarchy1 = "(//*[@class=\"statusFlag\"])[1]";
+	String Deal_Information_Customer_Status_On_Personalhierarchy1 = "(//div[starts-with(@class,'rowDataCell centerAlign')]/img[@class=\"statusFlag\"])[1]";
 	String Deal_Information_Deal_Status = "//*[@class='summaryDiv']/label[@orafield='status']";
 	String Deal_Information_Deal_Version_Status = "//*[@class='summaryDiv']/label[@orafield='model/status']";
 	String Deal_Information_Product_Financial_Summary_On_Pricing_And_Commitment_screen = "//tr/td[@orafield='productCode2' and text()='ReplaceProductName']/parent::tr";
@@ -419,8 +430,8 @@ public interface DealManagementPageElements
 	String Deal_Pricing_And_Commitment_Original_PriceList = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.priceListInfo || $context.row.attr.priceListInfo}\"]";
 	String Deal_Pricing_And_Commitment_Original_AssignmentLevel = "//tbody/tr/td[.//text()='ReplacePriceItemName' and following-sibling::td[.//text()='ReplacePriceItemParameterName']]/following-sibling::td//div[@data-bind=\"'attr':{'title':$context.$context?.row.attr.lvlLbl || $context.row.attr.lvlLbl}\"]";
 	
-	String Deal_Information_Screen_CompareType_Path = "(//oj-select-single[@id='compareType']//span/a)[1]";
-	String Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath = "//oj-highlight-text/span[text()='Proposed and Original']";
+	String Deal_Information_Screen_CompareType_Path = "(//oj-select-single[@id='compareType']/div[starts-with(@id,'ui-id')]/span/a)[1]";
+	String Deal_Information_Screen_CompareTypeProposedAndOriginalValuePath = "//span[text()='Proposed and Original']";
 	String Deal_Information_CreateDealVersion_Button = "//*[@oramdlabel='CREATENEWMODEL']";
 	String Deal_Version_PageTitle_Label = "//*[@class='oraPageTitle'][contains(text(),'Deal Version')]";
 	String Deal_Version_Description ="//*[@orafield='modelDescription']";
@@ -456,7 +467,7 @@ public interface DealManagementPageElements
 	String search_Algorithm_TextBox = "//*[@orafield='alg']";
 	String Search_Algorithm_Code = "//*[@value='Search']";
 	String Algorithm_Description_Navigation_link = "//*[@title='Go To Algorithm ']";
-	String Algorithm_Parameter_Value_Field = "//*[text()='ReplaceParameter']/ancestor::td//span/input[@orafield='value']";
+	String Algorithm_Parameter_Value_Field = "//*[./td/span[@orafield=\"parameterLabel\" and text()='ReplaceParameter']]//input[@orafield=\"value\"]";
 	String Algorithm_Save_Button = "//*[@value='Save']";
 	String Algorithm_Expand_Link = "//*[@id='expandScrollControl']";
 	String Algorithm_parameter_frame_Edit_button_click = "//*[@id='EDIT']";
@@ -479,7 +490,7 @@ public interface DealManagementPageElements
 	String ProductStandardCostPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[2]";
 	String ProductStandardProfitPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[3]";
 	String ProductStandardProfitabilityPath = "(//div[text()='ReplaceProductName']/ancestor::tr/td/div[starts-with(@class,'rowDataCell standardData ellipsis')])[4]";
-	
+
 	
 	
 }

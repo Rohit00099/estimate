@@ -109,7 +109,7 @@ public class CommonFunctions extends BaseTest
 			System.getProperty("line.separator"),
 			"Note: ** This is an auto-generated email. Please do not reply to this email.**");
 	
-	public static String to = "rohit.ramesh.thik@oracle.com";//,ajinkya.a.joshi@oracle.com,ajeet.phatak@oracle.com,vivek.jangam@oracle.com";
+	public static String to = "rohit.ramesh.thik@oracle.com,ajinkya.a.joshi@oracle.com,ajeet.phatak@oracle.com,vivek.jangam@oracle.com";
 	public static String from = "";
 	public static String host = "internal-mail-router.oraclecorp.com";
 	
