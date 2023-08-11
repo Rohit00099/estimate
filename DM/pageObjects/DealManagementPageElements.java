@@ -60,7 +60,7 @@ public interface DealManagementPageElements
 	String Deal_Information_ExpandAll_Button ="//*[@id='expandAll']";
 	String Deal_Price_Item_Group_Selection_ExpandAll_Button ="//*[@id='expandAll']";
 	String Deal_Information_PersonalHierarchyPersonName_Label ="(//tr/td/div[@class=\"personDataCell\"]/span)[1]";
-	String Deal_Information_PersonalHierarchyDivisionName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td[3]/div)";
+	String Deal_Information_PersonalHierarchyDivisionName_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td[2]/div)";
 	String Deal_Information_PersonalHierarchyRevenueVariationValue_Label ="(//*[@class='oj-fwk-icon oj-fwk-icon-arrow-n oj-menu-item-end-icon upiconSld']/following-sibling::span)";
 	String Deal_Information_PersonalHierarchyProjectedRevenueValue_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td//div[@class='rowDataCell proposedData ellipsis'])[1]";
 	String Deal_Information_PersonalHierarchyProjectedCostValue_Label ="(//*[.//text()='ReplacePersonName']/ancestor::tr/td//div[@class='rowDataCell proposedData ellipsis'])[2]";

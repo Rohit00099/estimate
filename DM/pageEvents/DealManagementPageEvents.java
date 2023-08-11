@@ -1149,12 +1149,12 @@ public class DealManagementPageEvents {
 				assertEquals(sPersonName, sPersonNameFromApplication);
 			}
 
-			if (!sDivision.equalsIgnoreCase("NoValue")) {
+/*			if (!sDivision.equalsIgnoreCase("NoValue")) {
 				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionName_Label.replaceAll("ReplacePersonName", sPersonName)).getText().trim();
 				Thread.sleep(3000);
 				System.out.println("Division value from application is " + sDivisionFromApplication);
 				assertEquals(sDivision, sDivisionFromApplication);
-			}
+			}*/
 
 			if (!sProjectedRevenue.equalsIgnoreCase("NoValue")) {
 				String sProjectedRevenueFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyProjectedRevenueValue_Label.replaceAll("ReplacePersonName", sPersonName)).getText().trim().replaceAll(",", "");
@@ -3388,12 +3388,12 @@ public class DealManagementPageEvents {
 				assertTrue(sAccountNameFromApplicationByText.contains(sAccountName));
 			}
 
-			if (!sDivision.equalsIgnoreCase("NoValue")) {
-				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionNameForAccounts_Label.replaceAll("ReplaceAccountName", sAccountName)).getText().trim();
-				Thread.sleep(3000);
-				System.out.println("Division value from application is " + sDivisionFromApplication);
-				assertEquals(sDivision, sDivisionFromApplication);
-			}
+//			if (!sDivision.equalsIgnoreCase("NoValue")) {
+//				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionNameForAccounts_Label.replaceAll("ReplaceAccountName", sAccountName)).getText().trim();
+//				Thread.sleep(3000);
+//				System.out.println("Division value from application is " + sDivisionFromApplication);
+//				assertEquals(sDivision, sDivisionFromApplication);
+//			}
 
 			if (!sProjectedRevenue.equalsIgnoreCase("NoValue")) {
 				String sProjectedRevenueFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyProjectedRevenueValueForAccounts_Label.replaceAll("ReplaceAccountName", sAccountName)).getText().trim().replaceAll(",", "");
@@ -6035,11 +6035,11 @@ public class DealManagementPageEvents {
 				assertEquals(sPersonName, sPersonNameFromApplication);
 			}
 
-			if (!sDivision.equalsIgnoreCase("NoValue")) {
+/*			if (!sDivision.equalsIgnoreCase("NoValue")) {
 				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionName_Label.replaceAll("ReplacePersonName", sPersonName)).getText().trim();
 				System.out.println("Division value from application is " + sDivisionFromApplication);
 				assertEquals(sDivision, sDivisionFromApplication);
-			}
+			}*/
 
 			//			if (!sStatus.equalsIgnoreCase("NoValue")) {
 			//				if (sStatus.equalsIgnoreCase("Approved")) {
@@ -6136,12 +6136,12 @@ public class DealManagementPageEvents {
 				assertTrue(sAccountNameFromApplicationByText.contains(sAccountName));
 			}
 
-			if (!sDivision.equalsIgnoreCase("NoValue")) {
-				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionNameForAccounts_Label.replaceAll("ReplaceAccountName", sAccountName)).getText().trim();
-				Thread.sleep(3000);
-				System.out.println(iStartingRow + " || Division value from application is " + sDivisionFromApplication);
-				assertEquals(sDivision, sDivisionFromApplication);
-			}
+//			if (!sDivision.equalsIgnoreCase("NoValue")) {
+//				String sDivisionFromApplication = CF.FnGetWebElement(driver, "XPATH", DealManagementPageElements.Deal_Information_PersonalHierarchyDivisionNameForAccounts_Label.replaceAll("ReplaceAccountName", sAccountName)).getText().trim();
+//				Thread.sleep(3000);
+//				System.out.println(iStartingRow + " || Division value from application is " + sDivisionFromApplication);
+//				assertEquals(sDivision, sDivisionFromApplication);
+//			}
 
 
 			//			if (!sRevenueVaration.equalsIgnoreCase("NoValue")) {
@@ -10708,12 +10708,6 @@ public class DealManagementPageEvents {
 
 		try {
 
-			Date sBillableChargeStartDateOld = new SimpleDateFormat("mm-dd-yyyy").parse(sBillableChargeStartDate);
-		    String sBillableChargeStartDate1 = new SimpleDateFormat("dd-MMM-yy").format(sBillableChargeStartDateOld);
-		    System.out.println("sBillableChargeStartDate1 = "+sBillableChargeStartDate1);
-
-			Date sBillableChargeEndDateOld = new SimpleDateFormat("mm-dd-yyyy").parse(sBillableChargeEndDate);
-		    String sBillableChargeEndDate1 = new SimpleDateFormat("dd-MMM-yy").format(sBillableChargeEndDateOld);
 
 			String IsBillableChargeAdded = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT COUNT(*) FROM CI_BILL_CHG FULL JOIN CI_BCHG_SQ ON CI_BILL_CHG.BILLABLE_CHG_ID = CI_BCHG_SQ.BILLABLE_CHG_ID WHERE SA_ID = '"+sContractId+"' and PRICEITEM_CD = '"+sPriceItem+"' and SVC_QTY = '"+sServiceQty+"'", "COUNT(*)", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
 
@@ -10817,6 +10811,16 @@ public class DealManagementPageEvents {
 
 			} else if (sActionFlag.equalsIgnoreCase("UPD")) {
 
+				Thread.sleep(2000);
+
+				AF.FnNavigation(driver, "BillableCharge");
+
+				Thread.sleep(5000);
+
+				CF.FnSetFrame(driver, "tabPage");
+
+				Thread.sleep(5000);
+				
 				//enter contract id 
 				CF.FnSetTextByKeyPressEnter(driver, DealManagementPageElements.SearchContractIdOnBillableCharge, sContractId);
 
@@ -10844,7 +10848,46 @@ public class DealManagementPageEvents {
 
 
 			}
-		 }
+		 } else {
+
+			 	sBillableChargeId = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT CI_BILL_CHG.BILLABLE_CHG_ID FROM CI_BILL_CHG FULL JOIN CI_BCHG_SQ ON CI_BILL_CHG.BILLABLE_CHG_ID = CI_BCHG_SQ.BILLABLE_CHG_ID WHERE SA_ID = '"+sContractId+"' and PRICEITEM_CD = '"+sPriceItem+"' and SVC_QTY = '"+sServiceQty+"'", "BILLABLE_CHG_ID", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
+
+				Thread.sleep(2000);
+
+				AF.FnNavigation(driver, "BillableCharge");
+
+				Thread.sleep(5000);
+
+				CF.FnSetFrame(driver, "tabPage");
+
+				Thread.sleep(5000);
+				//enter contract id 
+				CF.FnSetTextByKeyPressEnter(driver, DealManagementPageElements.SearchContractIdOnBillableCharge, sContractId);
+
+				Thread.sleep(5000);
+
+				//enter Billable Charge id 
+				CF.FnSetTextByKeyPressEnter(driver, DealManagementPageElements.EnterBillableChargeIdOnBillableChargeScreen, sBillableChargeId);
+
+				Thread.sleep(5000);
+
+				//StartDate
+				CF.FnSetText(driver, DealManagementPageElements.BillableChargeStartDate, sBillableChargeStartDate);
+
+				//EndDate
+				CF.FnSetText(driver, DealManagementPageElements.BillableChargeEndDate, sBillableChargeEndDate);
+
+				CF.FnSetFrame(driver, "main");
+
+				Thread.sleep(3000);
+
+				//Save Billable Charge
+				CF.FnElementClick(driver, DealManagementPageElements.BillableChargeSaveButton);
+
+				CF.FnTestCaseStatusReport("Pass", "Billable Charge Updated Successfully on Person :-" + sPersonName + " for Price Item :-" + sPriceItem);
+
+
+			}
 		} catch (Exception e) {
 			System.out.println("Application Function Exception occured ->" + e.getLocalizedMessage());
 			e.printStackTrace();

@@ -57,6 +57,16 @@ public class deal_mangement extends BaseTest {
 
         DB.FnUpdateBillableChargeDates(2243, sDealSheetName, sDealWorkbook);
         DB.FnUpdateBillableChargeDates(2244, sDealSheetName, sDealWorkbook);
+        
+        
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='INDPM'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='INDSPM'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='PMBK1'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='PMBK2'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='PRDMBK1'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='RMBK1'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+        DB.FnUpdateValueInDb("update sc_user set F1_SECURITY_HASH =' ' where user_id ='SPMBK1'","COMMIT", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort")); //after 6.0 latest QADATA Does not need this queries
+
 
     }
 
@@ -994,10 +1004,15 @@ public class deal_mangement extends BaseTest {
 
                 //Login to the system
                 loginEvents.loginToApplication(System.getProperty("userid"), System.getProperty("userPassword"));
-
-                AF.FnLoginChange(getDriver(), "RMBK1");
-                AF.FnNavigation(getDriver(), "Deal Dashboard");
-
+                
+                
+                //Function to update "Stacking Required" Option as N
+                //Excel Data to be used:
+                String sWorkbookSTACK = "./databank/banking/deal_management/DealManagement_Test_Stacking_39768.xlsx";
+                String sSheetNameSTACK = "TEST_DATA";
+                dealManagementPageEvents.FnUpdateAlgorithmValue(233, sSheetNameSTACK, sWorkbookSTACK);
+                dealManagementPageEvents.FnUpdateAlgorithmValue(234, sSheetNameSTACK, sWorkbookSTACK);
+                
 
                 //Excel Data to be used:
                 String sWorkbook = "./databank/banking/deal_management/DM_Automation_Deal_Managment_CurrencyAndDivProdOLD.xlsx";
@@ -1008,6 +1023,11 @@ public class deal_mangement extends BaseTest {
                 DB.FnUpdateBillableChargeDates(76, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(77, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(78, sSheetName, sWorkbook);
+                
+
+                AF.FnLoginChange(getDriver(), "RMBK1");
+                AF.FnNavigation(getDriver(), "Deal Dashboard");
+
 
                 String DealId = "3734785295";
 
@@ -2844,13 +2864,6 @@ public class deal_mangement extends BaseTest {
                 String sWorkbook = "./databank/banking/deal_management/BANK_82_6_Test_43785.xlsx";
                 String sSheetName = "TEST_DATA";
 
-                //Function To Update Billable Charge Start Date & End Date
-                DB.FnUpdateBillableChargeDates(70, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(71, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(72, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(73, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(74, sSheetName, sWorkbook);
-
                 DB.FnUpdateBillableChargeDates(277, sSheetName, sWorkbook);
                 DB.FnUpdateBillableChargeDates(278, sSheetName, sWorkbook);
 
@@ -3961,16 +3974,6 @@ public class deal_mangement extends BaseTest {
                 String sWorkbook = "./databank/banking/deal_management/DealManagement_Test_39944.xlsx";
                 String sSheetName = "TEST_DATA";
 
-                //Function To Update Billable Charge Start Date & End Date
-                DB.FnUpdateBillableChargeDates(285, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(286, sSheetName, sWorkbook);
-                
-            // Added On QADATA
-            //  DB.FnUpdateBillableChargeDates(71, sSheetName, sWorkbook);
-            //  DB.FnUpdateBillableChargeDates(72, sSheetName, sWorkbook);
-            //  DB.FnUpdateBillableChargeDates(73, sSheetName, sWorkbook);
-            //  DB.FnUpdateBillableChargeDates(74, sSheetName, sWorkbook);
-            //  DB.FnUpdateBillableChargeDates(75, sSheetName, sWorkbook);
 
               dealManagementPageEvents.FnAddBillableCharge(288, sSheetName, sWorkbook);
               dealManagementPageEvents.FnAddBillableCharge(289, sSheetName, sWorkbook);
@@ -3995,8 +3998,9 @@ public class deal_mangement extends BaseTest {
                 String sDealId, smodelId, sDealIdentifier = "";
 
                 //################ Deal Creation IWS ####################//
-//              String sDealCreation = "{\"C1-DealREST\":{\"actionFlag\":\"ADD\",\"dealDetails\":{\"dealEntityDetails\":{\"personId\":\"" + ExistingPersonId + "\"},\"dealIdentifier\":\"" + sDealIdentifier1 + "\",\"dealEntityType\":\"EPER\",\"contractedDealFlag\":\"true\",\"currency\":\"USD\",\"dealTypeCode\":\"" + sDealType1 + "\",\"startDate\":\"" + sStartDate + "\",\"simulationTypeFlag\":\"" + sSimulationType + "\",\"dealDescription\":\"Deal_Management_Test_39944 Desc\",\"dealVersionDescription\":\"Deal_Management_Test_39944 Ver Desc\",\"dealFrequency\":\"" + sDealFrequency + "\",\"skipReferenceFlag\":\"false\",\"priceSelectionDate\":\"" + sPriceSelectionDate + "\",\"usagePeriod\":\"" + sUsageFrequency + "\",\"includeHierarchyFlag\":\"false\",\"templateFlag\":\"false\"},\"templateReferenceDetails\":{\"copyBasicDetailsFlag\":\"false\",\"copyPricingFlag\":\"false\",\"copyUsageFlag\":\"false\"},\"dealTermsAndConditionsDetails\":{\"termsAndConditionsList\":[{\"description\":\"DEAL_T&C1\",\"termsAndCondition\":\"DEAL_T&C1\",\"termsAndConditionText\":\"DEAL_T&C1\"},{\"description\":\"DEAL_T&C2\",\"termsAndCondition\":\"DEAL_T&C2\",\"termsAndConditionText\":\"DEAL_T&C2\"}],\"adhocTermsAndCondition\":\"ADHOCTERMSANDCONDITIONS\"},\"productDetailsList\":[{\"productCode\":\"PRODUCT_CON_01\"},{\"productCode\":\"PRODUCT_CON_02\"}],\"referenceDetails\":{\"referenceTypeFlg\":\"RPER\",\"referPersonId\":\"3091575921\",\"referUsageSw\":true,\"referPriceSw\":true,\"includeChildHierarchy\":false}}}";
-                String sDealCreation = "{\"C1-DealREST\":{\"actionFlag\":\"ADD\",\"dealDetails\":{\"dealEntityDetails\":{\"personId\":\"" + ExistingPersonId + "\"},\"dealIdentifier\":\"" + sDealIdentifier1 + "\",\"dealEntityType\":\"EPER\",\"contractedDealFlag\":\"true\",\"currency\":\"USD\",\"dealTypeCode\":\"" + sDealType1 + "\",\"startDate\":\"" + sStartDate + "\",\"simulationTypeFlag\":\"" + sSimulationType + "\",\"dealDescription\":\"Deal_Management_Test_39944 Desc\",\"dealVersionDescription\":\"Deal_Management_Test_39944 Ver Desc\",\"dealFrequency\":\"" + sDealFrequency + "\",\"skipReferenceFlag\":\"true\",\"priceSelectionDate\":\"" + sPriceSelectionDate + "\",\"usagePeriod\":\"" + sUsageFrequency + "\",\"includeHierarchyFlag\":\"false\",\"templateFlag\":\"false\"},\"templateReferenceDetails\":{\"copyBasicDetailsFlag\":\"false\",\"copyPricingFlag\":\"false\",\"copyUsageFlag\":\"false\"},\"dealTermsAndConditionsDetails\":{\"termsAndConditionsList\":[{\"description\":\"DEAL_T&C1\",\"termsAndCondition\":\"DEAL_T&C1\",\"termsAndConditionText\":\"DEAL_T&C1\"},{\"description\":\"DEAL_T&C2\",\"termsAndCondition\":\"DEAL_T&C2\",\"termsAndConditionText\":\"DEAL_T&C2\"}],\"adhocTermsAndCondition\":\"ADHOCTERMSANDCONDITIONS\"},\"productDetailsList\":[{\"productCode\":\"PRODUCT_CON_01\"},{\"productCode\":\"PRODUCT_CON_02\"}],\"referenceDetails\":{\"referUsageSw\":false,\"referPriceSw\":false,\"includeChildHierarchy\":false}}}";
+                String sDealCreation = "{\"C1-DealREST\":{\"actionFlag\":\"ADD\",\"dealDetails\":{\"dealEntityDetails\":{\"personId\":\"" + ExistingPersonId + "\"},\"dealIdentifier\":\"" + sDealIdentifier1 + "\",\"dealEntityType\":\"EPER\",\"contractedDealFlag\":\"true\",\"currency\":\"USD\",\"dealTypeCode\":\"" + sDealType1 + "\",\"startDate\":\"" + sStartDate + "\",\"simulationTypeFlag\":\"" + sSimulationType + "\",\"dealDescription\":\"Deal_Management_Test_39944 Desc\",\"dealVersionDescription\":\"Deal_Management_Test_39944 Ver Desc\",\"dealFrequency\":\"" + sDealFrequency + "\",\"skipReferenceFlag\":\"false\",\"priceSelectionDate\":\"" + sPriceSelectionDate + "\",\"usagePeriod\":\"" + sUsageFrequency + "\",\"includeHierarchyFlag\":\"false\",\"templateFlag\":\"false\"},\"templateReferenceDetails\":{\"copyBasicDetailsFlag\":\"false\",\"copyPricingFlag\":\"false\",\"copyUsageFlag\":\"false\"},\"dealTermsAndConditionsDetails\":{\"termsAndConditionsList\":[{\"description\":\"DEAL_T&C1\",\"termsAndCondition\":\"DEAL_T&C1\",\"termsAndConditionText\":\"DEAL_T&C1\"},{\"description\":\"DEAL_T&C2\",\"termsAndCondition\":\"DEAL_T&C2\",\"termsAndConditionText\":\"DEAL_T&C2\"}],\"adhocTermsAndCondition\":\"ADHOCTERMSANDCONDITIONS\"},\"productDetailsList\":[{\"productCode\":\"PRODUCT_CON_01\"},{\"productCode\":\"PRODUCT_CON_02\"}],\"referenceDetails\":{\"referenceTypeFlg\":\"RPER\",\"referPersonId\":\"3091575921\",\"referUsageSw\":true,\"referPriceSw\":true,\"includeChildHierarchy\":false}}}";
+
+//                String sDealCreation = "{\"C1-DealREST\":{\"actionFlag\":\"ADD\",\"dealDetails\":{\"dealEntityDetails\":{\"personId\":\"" + ExistingPersonId + "\"},\"dealIdentifier\":\"" + sDealIdentifier1 + "\",\"dealEntityType\":\"EPER\",\"contractedDealFlag\":\"true\",\"currency\":\"USD\",\"dealTypeCode\":\"" + sDealType1 + "\",\"startDate\":\"" + sStartDate + "\",\"simulationTypeFlag\":\"" + sSimulationType + "\",\"dealDescription\":\"Deal_Management_Test_39944 Desc\",\"dealVersionDescription\":\"Deal_Management_Test_39944 Ver Desc\",\"dealFrequency\":\"" + sDealFrequency + "\",\"skipReferenceFlag\":\"true\",\"priceSelectionDate\":\"" + sPriceSelectionDate + "\",\"usagePeriod\":\"" + sUsageFrequency + "\",\"includeHierarchyFlag\":\"false\",\"templateFlag\":\"false\"},\"templateReferenceDetails\":{\"copyBasicDetailsFlag\":\"false\",\"copyPricingFlag\":\"false\",\"copyUsageFlag\":\"false\"},\"dealTermsAndConditionsDetails\":{\"termsAndConditionsList\":[{\"description\":\"DEAL_T&C1\",\"termsAndCondition\":\"DEAL_T&C1\",\"termsAndConditionText\":\"DEAL_T&C1\"},{\"description\":\"DEAL_T&C2\",\"termsAndCondition\":\"DEAL_T&C2\",\"termsAndConditionText\":\"DEAL_T&C2\"}],\"adhocTermsAndCondition\":\"ADHOCTERMSANDCONDITIONS\"},\"productDetailsList\":[{\"productCode\":\"PRODUCT_CON_01\"},{\"productCode\":\"PRODUCT_CON_02\"}],\"referenceDetails\":{\"referUsageSw\":false,\"referPriceSw\":false,\"includeChildHierarchy\":false}}}";
                 Hashtable < String, String > DealDetails = new Hashtable < String, String > ();
                 DealDetails = DM.FnCreateDeal(sDealCreation, sCreateDealResource, sContentTypeHeader, sAcceptTypeHeader);
                 sDealId = DealDetails.get("sDealId");
@@ -4004,7 +4008,7 @@ public class deal_mangement extends BaseTest {
                 sDealIdentifier = DealDetails.get("sDealIdentifier");
 
                 //This function to verify Deal Information Details from DB Table
-                DB.FnVerifyDealCreationInfoIWS(86, sSheetName, sWorkbook, sDealId);
+                DB.FnVerifyDealCreationInfoIWS(87, sSheetName, sWorkbook, sDealId);
 
 
                 //################ Deal PSEL READ IWS ####################//
@@ -4920,10 +4924,6 @@ public class deal_mangement extends BaseTest {
                 // To Change user for sending new request
                 WF.FnUserChange("RMBK1");
 
-                //Function to Update Billable Charge StartDate and EndDate
-                DB.FnUpdateBillableChargeDates(163, sSheetName, sWorkbook);
-                DB.FnUpdateBillableChargeDates(163, sSheetName, sWorkbook);
-
                 String sDateName = CommonFunctions.FnGetUniqueId();
                 String sDealIdentifier1 = CF.FnGetCellValue(90, 3, sSheetName, sWorkbook).toString().trim();
                 sDealIdentifier1 = sDealIdentifier1 + "_" + sDateName;
@@ -5209,7 +5209,7 @@ public class deal_mangement extends BaseTest {
                 dealManagementPageEvents.FnVerifyDealFinancialSummary(156, sSheetName, sWorkbook);
 
                 //Function To verify Division Financial Summary Information On Deal Information
-                dealManagementPageEvents.FnVerifyDivisionFinancialSummary(163, sSheetName, sWorkbook, "Deal");
+                dealManagementPageEvents.FnVerifyDivisionFinancialSummary(162, sSheetName, sWorkbook, "Deal");
 
 
             }
