@@ -3971,9 +3971,10 @@ public class deal_mangement extends BaseTest {
                 WF.FnUserChange("RMBK1");
 
                 //Excel Data to be used:
-                String sWorkbook = "./databank/banking/deal_management/DealManagement_Test_39944.xlsx";
+                String sWorkbook = "./databank/banking/deal_management/DealManagement_Test_39944_V1.xlsx";
                 String sSheetName = "TEST_DATA";
 
+                //Function To Update Billable Charge Start Date & End Date
 
               dealManagementPageEvents.FnAddBillableCharge(288, sSheetName, sWorkbook);
               dealManagementPageEvents.FnAddBillableCharge(289, sSheetName, sWorkbook);
@@ -4008,7 +4009,7 @@ public class deal_mangement extends BaseTest {
                 sDealIdentifier = DealDetails.get("sDealIdentifier");
 
                 //This function to verify Deal Information Details from DB Table
-                DB.FnVerifyDealCreationInfoIWS(87, sSheetName, sWorkbook, sDealId);
+                DB.FnVerifyDealCreationInfoIWS(86, sSheetName, sWorkbook, sDealId);
 
 
                 //################ Deal PSEL READ IWS ####################//
@@ -4923,6 +4924,10 @@ public class deal_mangement extends BaseTest {
 
                 // To Change user for sending new request
                 WF.FnUserChange("RMBK1");
+
+                //Function to Update Billable Charge StartDate and EndDate
+//                DB.FnUpdateBillableChargeDates(163, sSheetName, sWorkbook);
+//                DB.FnUpdateBillableChargeDates(163, sSheetName, sWorkbook);
 
                 String sDateName = CommonFunctions.FnGetUniqueId();
                 String sDealIdentifier1 = CF.FnGetCellValue(90, 3, sSheetName, sWorkbook).toString().trim();

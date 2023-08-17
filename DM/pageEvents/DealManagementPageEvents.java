@@ -10708,6 +10708,12 @@ public class DealManagementPageEvents {
 
 		try {
 
+//			Date sBillableChargeStartDateOld = new SimpleDateFormat("mm-dd-yyyy").parse(sBillableChargeStartDate);
+//		    String sBillableChargeStartDate1 = new SimpleDateFormat("dd-MMM-yy").format(sBillableChargeStartDateOld);
+//		    System.out.println("sBillableChargeStartDate1 = "+sBillableChargeStartDate1);
+//
+//			Date sBillableChargeEndDateOld = new SimpleDateFormat("mm-dd-yyyy").parse(sBillableChargeEndDate);
+//		    String sBillableChargeEndDate1 = new SimpleDateFormat("dd-MMM-yy").format(sBillableChargeEndDateOld);
 
 			String IsBillableChargeAdded = (String) DataBaseFunctions.FnGetDBColumnValue("SELECT COUNT(*) FROM CI_BILL_CHG FULL JOIN CI_BCHG_SQ ON CI_BILL_CHG.BILLABLE_CHG_ID = CI_BCHG_SQ.BILLABLE_CHG_ID WHERE SA_ID = '"+sContractId+"' and PRICEITEM_CD = '"+sPriceItem+"' and SVC_QTY = '"+sServiceQty+"'", "COUNT(*)", System.getProperty("dbName"), System.getProperty("dbUserName"), System.getProperty("dbPassword"), System.getProperty("dbMachineIP"), System.getProperty("dbPort"));
 
