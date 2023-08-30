@@ -12311,6 +12311,435 @@ public class DealManagementPageEvents {
 		return WF.respBody;
 
 	}
+	
+	
+	
+	/*'############################################################################################################################################################################################################################################
+	'Function Name        : FnAddPriceListAssignmentToDeal
+	,Description          : To Add Price List Assignment To Deal
+	'###############################################################################################################################################################################################################################################*/
+	
+	public String FnAddPriceListAssignmentToDeal(String sAddPriceList,String sAddPriceListAssignmentResource, String sContentTypeHeader, String sAcceptTypeHeader) throws Exception 
+    {      
+    	System.out.println("*--FnAddPriceListAssignmentToDeal");
+    	
+    	String sValue = null;String sPriceListAssignmentId = null;
+    	int iErrorStatusCode = 400;
+    	int iSuccessStatusCode = 200;
+    	
+    	try 
+		{
+			// To send POST request to server for creating Deal 
+			WF.FnPostRequestByString(sAddPriceListAssignmentResource, sAddPriceList, sContentTypeHeader,sAcceptTypeHeader);
+
+			int iStatusCode = WF.FnGetStatusCodeFromResponse();
+			if (iStatusCode == iErrorStatusCode) {
+				assertEquals(iStatusCode, iErrorStatusCode, "Status code is 400 : Error Is thrown");
+			
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.title");
+				System.out.println("Price List NOT assigned to Deal ! Reason Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Reason Is : " + sValue);					
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.httpStatus");
+				System.out.println("Price List NOT assigned to Deal ! httpStatus Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! httpStatus Is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageText");
+				System.out.println("Price List NOT assigned to Deal ! Message text Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Reason Is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageNbr");
+				System.out.println("Price List NOT assigned to Deal ! Message Number Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Message Number Is : " + sValue);
+				
+				CF.FnTestCaseStatusReport("PASS", "Price List NOT assigned to Deal due to Error "+iStatusCode);
+			}
+
+			else {
+				assertEquals(iStatusCode, iSuccessStatusCode, "Status code is Matching");
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.dealId");
+				System.out.println("Price List Assignment is Added ! Deal ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added !  Deal ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.modelId");
+				System.out.println("Price List Assignment is Added ! Model ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Model ID is : " + sValue);
+
+				sPriceListAssignmentId = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListAssignmentId");
+				System.out.println("Price List Assignment is Added ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListId");
+				System.out.println("Price List Assignment is Added ! Price List ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Price List ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.entityId");
+				System.out.println("Price List Assignment is Added ! Entity ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Entity ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.startDate");
+				System.out.println("Price List Assignment is Added ! Start Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Start Date is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.endDate");
+				System.out.println("Price List Assignment is Added ! End Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! End Date is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priority");
+				System.out.println("Price List Assignment is Added ! Priority is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Priority is : " + sValue);
+
+		}
+	}		
+		catch (Exception e) 
+		{
+			System.out.println("Common Function Exception occured ->"+e.getLocalizedMessage()); 
+            e.printStackTrace();
+        }
+   
+    	return sPriceListAssignmentId;   	
+    }	
+	
+
+	
+	
+	/*'############################################################################################################################################################################################################################################
+	'Function Name        : FnReadPriceListAssignmentToDeal
+	,Description          : To Read Price List Assignment To Deal
+	'###############################################################################################################################################################################################################################################*/
+	
+	public String FnReadPriceListAssignmentToDeal(String sAddPriceList,String sAddPriceListAssignmentResource, String sContentTypeHeader, String sAcceptTypeHeader) throws Exception 
+    {      
+    	System.out.println("*--FnReadPriceListAssignmentToDeal");
+    	
+    	String sValue = null,sPriceListId=null;
+    	int iErrorStatusCode = 400;
+    	int iSuccessStatusCode = 200;
+    	
+    	try 
+		{
+			// To send POST request to server for creating Deal 
+			WF.FnPostRequestByString(sAddPriceListAssignmentResource, sAddPriceList, sContentTypeHeader,sAcceptTypeHeader);
+
+			int iStatusCode = WF.FnGetStatusCodeFromResponse();
+			if (iStatusCode == iErrorStatusCode) {
+				assertEquals(iStatusCode, iErrorStatusCode, "Status code is 400 : Error Is thrown");
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.title");
+				System.out.println("Price List read is NOT completed ! Reason Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is NOT completed ! Reason Is : " + sValue);					
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.httpStatus");
+				System.out.println("Price List read is NOT completed ! httpStatus Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is NOT completed ! httpStatus Is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageText");
+				System.out.println("Price List read is NOT completed ! Message text Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is NOT completed ! Reason Is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageNbr");
+				System.out.println("Price List read is NOT completed ! Message Number Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is NOT completed ! Message Number Is : " + sValue);
+				
+				CF.FnTestCaseStatusReport("PASS", "Price List read is NOT completed due to Error "+iStatusCode);
+			}
+
+			else {
+				assertEquals(iStatusCode, iSuccessStatusCode, "Status code is Matching");
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.dealId");
+				System.out.println("Price List read is completed ! Deal ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is completed !  Deal ID is : " + sValue);
+				
+				
+				sPriceListId = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListId");
+				System.out.println("Price List read is completed ! Price List ID is : " + sPriceListId);
+				CF.FnTestCaseStatusReport("Pass", "Price List read is completed ! Price List ID is : " + sPriceListId);
+
+		}
+	}		
+		catch (Exception e) 
+		{
+			System.out.println("Common Function Exception occured ->"+e.getLocalizedMessage()); 
+            e.printStackTrace();
+        }
+   
+    	return sPriceListId;   	
+    }	
+
+	
+	
+
+	/*'############################################################################################################################################################################################################################################
+	'Function Name        : FnUpdatePriceListAssignmentToDeal
+	,Description          : To Update Price List Assignment To Deal
+	'###############################################################################################################################################################################################################################################*/
+	
+	public String FnUpdatePriceListAssignmentToDeal(String sAddPriceList,String sAddPriceListAssignmentResource, String sContentTypeHeader, String sAcceptTypeHeader) throws Exception 
+    {      
+    	System.out.println("*--FnUpdatePriceListAssignmentToDeal");
+    	
+    	String sValue = null,sPriceListAssignmentId=null;
+    	int iErrorStatusCode = 400;
+    	int iSuccessStatusCode = 200;
+    	
+    	try 
+		{
+			// To send POST request to server for creating Deal 
+			WF.FnPostRequestByString(sAddPriceListAssignmentResource, sAddPriceList, sContentTypeHeader,sAcceptTypeHeader);
+
+			int iStatusCode = WF.FnGetStatusCodeFromResponse();
+			if (iStatusCode == iErrorStatusCode) {
+				assertEquals(iStatusCode, iErrorStatusCode, "Status code is 400 : Error Is thrown");
+			
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.title");
+				System.out.println("Price List NOT Updated to Deal ! Reason Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Updated to Deal ! Reason Is : " + sValue);					
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.httpStatus");
+				System.out.println("Price List NOT Updated to Deal ! httpStatus Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Updated to Deal ! httpStatus Is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageText");
+				System.out.println("Price List NOT Updated to Deal ! Message text Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Updated to Deal ! Reason Is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageNbr");
+				System.out.println("Price List NOT Updated to Deal ! Message Number Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Updated to Deal ! Message Number Is : " + sValue);
+				
+				CF.FnTestCaseStatusReport("PASS", "Price List NOT Updated to Deal due to Error "+iStatusCode);
+			}
+
+			else {
+				assertEquals(iStatusCode, iSuccessStatusCode, "Status code is Matching");
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.dealId");
+				System.out.println("Price List Assignment is Updated ! Deal ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated !  Deal ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.modelId");
+				System.out.println("Price List Assignment is Updated ! Model ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Model ID is : " + sValue);
+
+				sPriceListAssignmentId = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListAssignmentId");
+				System.out.println("Price List Assignment is Updated ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListId");
+				System.out.println("Price List Assignment is Updated ! Price List ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Price List ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.entityId");
+				System.out.println("Price List Assignment is Updated ! Entity ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Entity ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.startDate");
+				System.out.println("Price List Assignment is Updated ! Start Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Start Date is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.endDate");
+				System.out.println("Price List Assignment is Updated ! End Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! End Date is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priority");
+				System.out.println("Price List Assignment is Updated ! Priority is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Updated ! Priority is : " + sValue);
+
+
+		}
+	}		
+		catch (Exception e) 
+		{
+			System.out.println("Common Function Exception occured ->"+e.getLocalizedMessage()); 
+            e.printStackTrace();
+        }
+   
+    	return sPriceListAssignmentId;   	
+    }	
+
+	
+
+	/*'############################################################################################################################################################################################################################################
+	'Function Name        : FnDeletePriceListAssignmentToDeal
+	,Description          : To Delete Price List Assignment To Deal
+	'###############################################################################################################################################################################################################################################*/
+	
+	public String FnDeletePriceListAssignmentToDeal(String sAddPriceList,String sAddPriceListAssignmentResource, String sContentTypeHeader, String sAcceptTypeHeader) throws Exception 
+    {      
+    	System.out.println("*--FnDeletePriceListAssignmentToDeal");
+    	
+    	String sValue = null,sPriceListAssignmentId=null;
+    	int iErrorStatusCode = 400;
+    	int iSuccessStatusCode = 200;
+    	
+    	try 
+		{
+			// To send POST request to server for creating Deal 
+			WF.FnPostRequestByString(sAddPriceListAssignmentResource, sAddPriceList, sContentTypeHeader,sAcceptTypeHeader);
+
+			int iStatusCode = WF.FnGetStatusCodeFromResponse();
+			if (iStatusCode == iErrorStatusCode) {
+				assertEquals(iStatusCode, iErrorStatusCode, "Status code is 400 : Error Is thrown");
+			
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.title");
+				System.out.println("Price List NOT Deleted to Deal ! Reason Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Deleted to Deal ! Reason Is : " + sValue);					
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.httpStatus");
+				System.out.println("Price List NOT Deleted to Deal ! httpStatus Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Deleted to Deal ! httpStatus Is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageText");
+				System.out.println("Price List NOT Deleted to Deal ! Message text Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Deleted to Deal ! Reason Is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageNbr");
+				System.out.println("Price List NOT Deleted to Deal ! Message Number Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT Deleted to Deal ! Message Number Is : " + sValue);
+				
+				CF.FnTestCaseStatusReport("PASS", "Price List NOT Deleted to Deal due to Error "+iStatusCode);
+			}
+
+			else {
+				assertEquals(iStatusCode, iSuccessStatusCode, "Status code is Matching");
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.dealId");
+				System.out.println("Price List Assignment is Deleted ! Deal ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted !  Deal ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.modelId");
+				System.out.println("Price List Assignment is Deleted ! Model ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Model ID is : " + sValue);
+
+				sPriceListAssignmentId = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListAssignmentId");
+				System.out.println("Price List Assignment is Deleted ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListId");
+				System.out.println("Price List Assignment is Deleted ! Price List ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Price List ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.entityId");
+				System.out.println("Price List Assignment is Deleted ! Entity ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Entity ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.startDate");
+				System.out.println("Price List Assignment is Deleted ! Start Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Start Date is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.endDate");
+				System.out.println("Price List Assignment is Deleted ! End Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! End Date is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priority");
+				System.out.println("Price List Assignment is Deleted ! Priority is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Deleted ! Priority is : " + sValue);
+
+
+		}
+	}		
+		catch (Exception e) 
+		{
+			System.out.println("Common Function Exception occured ->"+e.getLocalizedMessage()); 
+            e.printStackTrace();
+        }
+   
+    	return sPriceListAssignmentId;   	
+    }	
+
+	
+	
+	/*'############################################################################################################################################################################################################################################
+	'Function Name        : FnAddPriceListAssignmentToDeal
+	,Description          : To Add Price List Assignment To Deal
+	'###############################################################################################################################################################################################################################################*/
+	
+	public List<String> FnAddMultiplePriceListAssignmentToDeal(String sAddPriceList,String sAddPriceListAssignmentResource, String sContentTypeHeader, String sAcceptTypeHeader) throws Exception 
+    {      
+    	System.out.println("*--FnAddPriceListAssignmentToDeal");
+    	
+    	String sValue = null;
+    	List<String> sPriceListAssignmentId = null;
+    	int iErrorStatusCode = 400;
+    	int iSuccessStatusCode = 200;
+    	
+    	try 
+		{
+			// To send POST request to server for creating Deal 
+			WF.FnPostRequestByString(sAddPriceListAssignmentResource, sAddPriceList, sContentTypeHeader,sAcceptTypeHeader);
+
+			int iStatusCode = WF.FnGetStatusCodeFromResponse();
+			if (iStatusCode == iErrorStatusCode) {
+				assertEquals(iStatusCode, iErrorStatusCode, "Status code is 400 : Error Is thrown");
+			
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.title");
+				System.out.println("Price List NOT assigned to Deal ! Reason Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Reason Is : " + sValue);					
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.httpStatus");
+				System.out.println("Price List NOT assigned to Deal ! httpStatus Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! httpStatus Is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageText");
+				System.out.println("Price List NOT assigned to Deal ! Message text Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Reason Is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("problemDetailDocument.serverMessage.messageNbr");
+				System.out.println("Price List NOT assigned to Deal ! Message Number Is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List NOT assigned to Deal ! Message Number Is : " + sValue);
+				
+				CF.FnTestCaseStatusReport("PASS", "Price List NOT assigned to Deal due to Error "+iStatusCode);
+			}
+
+			else {
+				assertEquals(iStatusCode, iSuccessStatusCode, "Status code is Matching");
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.dealId");
+				System.out.println("Price List Assignment is Added ! Deal ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added !  Deal ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.modelId");
+				System.out.println("Price List Assignment is Added ! Model ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Model ID is : " + sValue);
+
+				sPriceListAssignmentId = WF.FnGetListOfDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListAssignmentId");
+				System.out.println("Price List Assignment is Added ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Price List Assignment ID is : " + sPriceListAssignmentId);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priceListId");
+				System.out.println("Price List Assignment is Added ! Price List ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Price List ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.entityId");
+				System.out.println("Price List Assignment is Added ! Entity ID is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Entity ID is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.startDate");
+				System.out.println("Price List Assignment is Added ! Start Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Start Date is : " + sValue);
+				
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.endDate");
+				System.out.println("Price List Assignment is Added ! End Date is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! End Date is : " + sValue);
+
+				sValue = WF.FnGetDataFromResponse("C1-DealPricelistAssignmentREST.pricelistassignmentlist.priority");
+				System.out.println("Price List Assignment is Added ! Priority is : " + sValue);
+				CF.FnTestCaseStatusReport("Pass", "Price List Assignment is Added ! Priority is : " + sValue);
+
+		}
+	}		
+		catch (Exception e) 
+		{
+			System.out.println("Common Function Exception occured ->"+e.getLocalizedMessage()); 
+            e.printStackTrace();
+        }
+   
+    	return sPriceListAssignmentId;   	
+    }	
+
+	
 /*
 	'############################################################################################################################################################################################################################################
 	'Function Name        : FnDealExtractIWS
